@@ -1,0 +1,577 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */; };
+		CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */; };
+		CF24ED6518E4E5940024C696 /* LeakCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6418E4E5940024C696 /* LeakCell.m */; };
+		CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF24ED6618E4E6DB0024C696 /* LeakCell.xib */; };
+		CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6918E4F1980024C696 /* LeakEntity.m */; };
+		CF26877418E8B3D40003A7DC /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26877318E8B3D40003A7DC /* UserViewController.m */; };
+		CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BB18E3A91400AEE34F /* Foundation.framework */; };
+		CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */; };
+		CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BF18E3A91400AEE34F /* UIKit.framework */; };
+		CF6641C618E3A91400AEE34F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF6641C418E3A91400AEE34F /* InfoPlist.strings */; };
+		CF6641C818E3A91400AEE34F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6641C718E3A91400AEE34F /* main.m */; };
+		CF6641CC18E3A91400AEE34F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6641CB18E3A91400AEE34F /* AppDelegate.m */; };
+		CF6641CF18E3A91400AEE34F /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6641CD18E3A91400AEE34F /* Main_iPhone.storyboard */; };
+		CF6641D218E3A91400AEE34F /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CF6641D018E3A91400AEE34F /* Main_iPad.storyboard */; };
+		CF6641D518E3A91400AEE34F /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6641D418E3A91400AEE34F /* ViewController.m */; };
+		CF6641D718E3A91400AEE34F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CF6641D618E3A91400AEE34F /* Images.xcassets */; };
+		CF6641DE18E3A91400AEE34F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641DD18E3A91400AEE34F /* XCTest.framework */; };
+		CF6641DF18E3A91400AEE34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BB18E3A91400AEE34F /* Foundation.framework */; };
+		CF6641E018E3A91400AEE34F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BF18E3A91400AEE34F /* UIKit.framework */; };
+		CF6641E818E3A91400AEE34F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CF6641E618E3A91400AEE34F /* InfoPlist.strings */; };
+		CF6641EA18E3A91400AEE34F /* goleakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6641E918E3A91400AEE34F /* goleakTests.m */; };
+		CF8D00D918EB7A4800E52CCC /* LeakService.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8D00D818EB7A4800E52CCC /* LeakService.m */; };
+		CF8D00DD18EB842700E52CCC /* LeakOperationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8D00DC18EB842700E52CCC /* LeakOperationResult.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CF6641E118E3A91400AEE34F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CF6641B018E3A91400AEE34F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CF6641B718E3A91400AEE34F;
+			remoteInfo = goleak;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CF0DD62218EA4D2D00418EA4 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
+		CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
+		CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
+		CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
+		CF24ED6318E4E5940024C696 /* LeakCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakCell.h; sourceTree = "<group>"; };
+		CF24ED6418E4E5940024C696 /* LeakCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakCell.m; sourceTree = "<group>"; };
+		CF24ED6618E4E6DB0024C696 /* LeakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeakCell.xib; sourceTree = "<group>"; };
+		CF24ED6818E4F1980024C696 /* LeakEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakEntity.h; sourceTree = "<group>"; };
+		CF24ED6918E4F1980024C696 /* LeakEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakEntity.m; sourceTree = "<group>"; };
+		CF26877218E8B3D40003A7DC /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
+		CF26877318E8B3D40003A7DC /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		CF6641B818E3A91400AEE34F /* goleak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goleak.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6641BB18E3A91400AEE34F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		CF6641BF18E3A91400AEE34F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		CF6641C318E3A91400AEE34F /* goleak-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goleak-Info.plist"; sourceTree = "<group>"; };
+		CF6641C518E3A91400AEE34F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF6641C718E3A91400AEE34F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		CF6641C918E3A91400AEE34F /* goleak-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "goleak-Prefix.pch"; sourceTree = "<group>"; };
+		CF6641CA18E3A91400AEE34F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		CF6641CB18E3A91400AEE34F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		CF6641CE18E3A91400AEE34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		CF6641D118E3A91400AEE34F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		CF6641D318E3A91400AEE34F /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		CF6641D418E3A91400AEE34F /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		CF6641D618E3A91400AEE34F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		CF6641DC18E3A91400AEE34F /* goleakTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = goleakTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF6641DD18E3A91400AEE34F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		CF6641E518E3A91400AEE34F /* goleakTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "goleakTests-Info.plist"; sourceTree = "<group>"; };
+		CF6641E718E3A91400AEE34F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		CF6641E918E3A91400AEE34F /* goleakTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = goleakTests.m; sourceTree = "<group>"; };
+		CF8D00D718EB7A4800E52CCC /* LeakService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakService.h; sourceTree = "<group>"; };
+		CF8D00D818EB7A4800E52CCC /* LeakService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakService.m; sourceTree = "<group>"; };
+		CF8D00DB18EB842700E52CCC /* LeakOperationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakOperationResult.h; sourceTree = "<group>"; };
+		CF8D00DC18EB842700E52CCC /* LeakOperationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakOperationResult.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CF6641B518E3A91400AEE34F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */,
+				CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */,
+				CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6641D918E3A91400AEE34F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6641DE18E3A91400AEE34F /* XCTest.framework in Frameworks */,
+				CF6641E018E3A91400AEE34F /* UIKit.framework in Frameworks */,
+				CF6641DF18E3A91400AEE34F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CF0DD61F18EA249F00418EA4 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				CF24ED6918E4F1980024C696 /* LeakEntity.m */,
+				CF24ED6818E4F1980024C696 /* LeakEntity.h */,
+			);
+			name = Entity;
+			sourceTree = "<group>";
+		};
+		CF0DD62018EA24BF00418EA4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CF26877318E8B3D40003A7DC /* UserViewController.m */,
+				CF26877218E8B3D40003A7DC /* UserViewController.h */,
+				CF6641D418E3A91400AEE34F /* ViewController.m */,
+				CF6641D318E3A91400AEE34F /* ViewController.h */,
+				CF0DD62218EA4D2D00418EA4 /* FriendsViewController.h */,
+				CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */,
+				CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */,
+				CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		CF0DD62118EA250B00418EA4 /* Layout */ = {
+			isa = PBXGroup;
+			children = (
+				CF24ED6318E4E5940024C696 /* LeakCell.h */,
+				CF24ED6418E4E5940024C696 /* LeakCell.m */,
+				CF24ED6618E4E6DB0024C696 /* LeakCell.xib */,
+			);
+			name = Layout;
+			sourceTree = "<group>";
+		};
+		CF6641AF18E3A91400AEE34F = {
+			isa = PBXGroup;
+			children = (
+				CF6641C118E3A91400AEE34F /* goleak */,
+				CF6641E318E3A91400AEE34F /* goleakTests */,
+				CF6641BA18E3A91400AEE34F /* Frameworks */,
+				CF6641B918E3A91400AEE34F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CF6641B918E3A91400AEE34F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CF6641B818E3A91400AEE34F /* goleak.app */,
+				CF6641DC18E3A91400AEE34F /* goleakTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF6641BA18E3A91400AEE34F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF6641BB18E3A91400AEE34F /* Foundation.framework */,
+				CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */,
+				CF6641BF18E3A91400AEE34F /* UIKit.framework */,
+				CF6641DD18E3A91400AEE34F /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF6641C118E3A91400AEE34F /* goleak */ = {
+			isa = PBXGroup;
+			children = (
+				CF8D00DA18EB83E000E52CCC /* OperationResult */,
+				CF8D00D618EB79D100E52CCC /* Service */,
+				CF0DD62118EA250B00418EA4 /* Layout */,
+				CF0DD62018EA24BF00418EA4 /* Controller */,
+				CF0DD61F18EA249F00418EA4 /* Entity */,
+				CF6641CA18E3A91400AEE34F /* AppDelegate.h */,
+				CF6641CB18E3A91400AEE34F /* AppDelegate.m */,
+				CF6641CD18E3A91400AEE34F /* Main_iPhone.storyboard */,
+				CF6641D018E3A91400AEE34F /* Main_iPad.storyboard */,
+				CF6641D618E3A91400AEE34F /* Images.xcassets */,
+				CF6641C218E3A91400AEE34F /* Supporting Files */,
+			);
+			path = goleak;
+			sourceTree = "<group>";
+		};
+		CF6641C218E3A91400AEE34F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF6641C318E3A91400AEE34F /* goleak-Info.plist */,
+				CF6641C418E3A91400AEE34F /* InfoPlist.strings */,
+				CF6641C718E3A91400AEE34F /* main.m */,
+				CF6641C918E3A91400AEE34F /* goleak-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF6641E318E3A91400AEE34F /* goleakTests */ = {
+			isa = PBXGroup;
+			children = (
+				CF6641E918E3A91400AEE34F /* goleakTests.m */,
+				CF6641E418E3A91400AEE34F /* Supporting Files */,
+			);
+			path = goleakTests;
+			sourceTree = "<group>";
+		};
+		CF6641E418E3A91400AEE34F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CF6641E518E3A91400AEE34F /* goleakTests-Info.plist */,
+				CF6641E618E3A91400AEE34F /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CF8D00D618EB79D100E52CCC /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				CF8D00D718EB7A4800E52CCC /* LeakService.h */,
+				CF8D00D818EB7A4800E52CCC /* LeakService.m */,
+			);
+			name = Service;
+			sourceTree = "<group>";
+		};
+		CF8D00DA18EB83E000E52CCC /* OperationResult */ = {
+			isa = PBXGroup;
+			children = (
+				CF8D00DB18EB842700E52CCC /* LeakOperationResult.h */,
+				CF8D00DC18EB842700E52CCC /* LeakOperationResult.m */,
+			);
+			name = OperationResult;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CF6641B718E3A91400AEE34F /* goleak */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF6641ED18E3A91400AEE34F /* Build configuration list for PBXNativeTarget "goleak" */;
+			buildPhases = (
+				CF6641B418E3A91400AEE34F /* Sources */,
+				CF6641B518E3A91400AEE34F /* Frameworks */,
+				CF6641B618E3A91400AEE34F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = goleak;
+			productName = goleak;
+			productReference = CF6641B818E3A91400AEE34F /* goleak.app */;
+			productType = "com.apple.product-type.application";
+		};
+		CF6641DB18E3A91400AEE34F /* goleakTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CF6641F018E3A91400AEE34F /* Build configuration list for PBXNativeTarget "goleakTests" */;
+			buildPhases = (
+				CF6641D818E3A91400AEE34F /* Sources */,
+				CF6641D918E3A91400AEE34F /* Frameworks */,
+				CF6641DA18E3A91400AEE34F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CF6641E218E3A91400AEE34F /* PBXTargetDependency */,
+			);
+			name = goleakTests;
+			productName = goleakTests;
+			productReference = CF6641DC18E3A91400AEE34F /* goleakTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CF6641B018E3A91400AEE34F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0500;
+				ORGANIZATIONNAME = "ROBERTO JUNIOR";
+				TargetAttributes = {
+					CF6641DB18E3A91400AEE34F = {
+						TestTargetID = CF6641B718E3A91400AEE34F;
+					};
+				};
+			};
+			buildConfigurationList = CF6641B318E3A91400AEE34F /* Build configuration list for PBXProject "goleak" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CF6641AF18E3A91400AEE34F;
+			productRefGroup = CF6641B918E3A91400AEE34F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CF6641B718E3A91400AEE34F /* goleak */,
+				CF6641DB18E3A91400AEE34F /* goleakTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CF6641B618E3A91400AEE34F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6641D218E3A91400AEE34F /* Main_iPad.storyboard in Resources */,
+				CF6641D718E3A91400AEE34F /* Images.xcassets in Resources */,
+				CF6641CF18E3A91400AEE34F /* Main_iPhone.storyboard in Resources */,
+				CF6641C618E3A91400AEE34F /* InfoPlist.strings in Resources */,
+				CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6641DA18E3A91400AEE34F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6641E818E3A91400AEE34F /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CF6641B418E3A91400AEE34F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6641D518E3A91400AEE34F /* ViewController.m in Sources */,
+				CF6641CC18E3A91400AEE34F /* AppDelegate.m in Sources */,
+				CF8D00D918EB7A4800E52CCC /* LeakService.m in Sources */,
+				CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */,
+				CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */,
+				CF24ED6518E4E5940024C696 /* LeakCell.m in Sources */,
+				CF26877418E8B3D40003A7DC /* UserViewController.m in Sources */,
+				CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */,
+				CF6641C818E3A91400AEE34F /* main.m in Sources */,
+				CF8D00DD18EB842700E52CCC /* LeakOperationResult.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CF6641D818E3A91400AEE34F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF6641EA18E3A91400AEE34F /* goleakTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CF6641E218E3A91400AEE34F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CF6641B718E3A91400AEE34F /* goleak */;
+			targetProxy = CF6641E118E3A91400AEE34F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		CF6641C418E3A91400AEE34F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF6641C518E3A91400AEE34F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		CF6641CD18E3A91400AEE34F /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF6641CE18E3A91400AEE34F /* Base */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		CF6641D018E3A91400AEE34F /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF6641D118E3A91400AEE34F /* Base */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		CF6641E618E3A91400AEE34F /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CF6641E718E3A91400AEE34F /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CF6641EB18E3A91400AEE34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		CF6641EC18E3A91400AEE34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CF6641EE18E3A91400AEE34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
+				INFOPLIST_FILE = "goleak/goleak-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		CF6641EF18E3A91400AEE34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
+				INFOPLIST_FILE = "goleak/goleak-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		CF6641F118E3A91400AEE34F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/goleak.app/goleak";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "goleakTests/goleakTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		CF6641F218E3A91400AEE34F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_INCLUDING_64_BIT)";
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/goleak.app/goleak";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
+				INFOPLIST_FILE = "goleakTests/goleakTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CF6641B318E3A91400AEE34F /* Build configuration list for PBXProject "goleak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF6641EB18E3A91400AEE34F /* Debug */,
+				CF6641EC18E3A91400AEE34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF6641ED18E3A91400AEE34F /* Build configuration list for PBXNativeTarget "goleak" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF6641EE18E3A91400AEE34F /* Debug */,
+				CF6641EF18E3A91400AEE34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CF6641F018E3A91400AEE34F /* Build configuration list for PBXNativeTarget "goleakTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CF6641F118E3A91400AEE34F /* Debug */,
+				CF6641F218E3A91400AEE34F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CF6641B018E3A91400AEE34F /* Project object */;
+}

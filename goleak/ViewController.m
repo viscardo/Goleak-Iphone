@@ -27,8 +27,8 @@
     
     //[self.loading startAnimating];
     self.receivedData = [[NSMutableData alloc] init];
-    
-    [[LeakService new] GetMyLeakFedd:1 : self  ];
+    self.friendsTable.dataSource = self;
+    [[LeakService new] GetMyLeakFedd:1 :self  ];
     
     
     /*

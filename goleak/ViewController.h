@@ -12,7 +12,7 @@
 #import "UserViewController.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
-@property (nonatomic, strong) IBOutlet UITableView *friendsTable;
-@property (nonatomic, strong) NSMutableArray *leaksArray;
+@property (nonatomic, retain) IBOutlet UITableView *friendsTable;
+@property (nonatomic, retain) NSMutableArray *leaksArray;
 @property (nonatomic, retain) LeakEntity *leakChosen;
 @end

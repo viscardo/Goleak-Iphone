@@ -14,7 +14,7 @@
 -(void) GetMyLeakFedd :(int)userId :(id)delegate
 {
     
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetMyLeakFedd?userId=%d", userId];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetMyLeakFedd?userId=1"];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     

@@ -26,15 +26,21 @@
         NSArray *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&myError];
         
         for(NSDictionary *item in res) {
+            //[[item objectForKey:@"UserLeaked"] objectForKey:@"FirstName"] ;
+            
+            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large",[[item objectForKey:@"UserLeaked"] objectForKey:@"fb"]];
+            
+          
+            
             LeakEntity * d = [[LeakEntity alloc]init];
-            d.userName = [item objectForKey:@"UserName"];
+            d.userName = [[item objectForKey:@"UserLeaked"] objectForKey:@"FirstName"] ;
             d.leakText = [item objectForKey:@"LeakText"];
             d.genderLeak = [item objectForKey:@"GenderLeak"];
-            d.timeLeaked = [item objectForKey:@"TimeLeaked"] ;
-            d.pictureUrl = [item objectForKey:@"PictureUrl"];
-            d.likes = [item objectForKey:@"Likes"];
-            d.dislikes = [item objectForKey:@"Dislikes"];
-            d.codigo = [item objectForKey:@"Codigo"];
+            d.timeLeaked = [item objectForKey:@"CreatedOn"] ;
+            d.pictureUrl = avatar; ;
+            d.likes = [item objectForKey:@"TrueLeaks"];
+            d.dislikes = [item objectForKey:@"FalseLeaks"];
+            d.codigo = [item objectForKey:@"Id"];
             [self.leaks addObject:d];
             
 

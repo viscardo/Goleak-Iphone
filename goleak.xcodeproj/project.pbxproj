@@ -13,6 +13,15 @@
 		CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF24ED6618E4E6DB0024C696 /* LeakCell.xib */; };
 		CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6918E4F1980024C696 /* LeakEntity.m */; };
 		CF26877418E8B3D40003A7DC /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26877318E8B3D40003A7DC /* UserViewController.m */; };
+		CF28B89218F4AC7E005C90EE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
+		CF28B89518F4AD98005C90EE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF28B89418F4AD98005C90EE /* LoginViewController.m */; };
+		CF28B89818F4B020005C90EE /* goleak.png in Resources */ = {isa = PBXBuildFile; fileRef = CF28B89718F4B020005C90EE /* goleak.png */; };
+		CF28B89A18F4B13E005C90EE /* login-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CF28B89918F4B13E005C90EE /* login-button.png */; };
+		CF28B89C18F4B94C005C90EE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89B18F4B94C005C90EE /* libsqlite3.dylib */; };
+		CF28B89E18F4B963005C90EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89D18F4B963005C90EE /* Security.framework */; };
+		CF28B8A018F4B9B0005C90EE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89F18F4B9B0005C90EE /* Social.framework */; };
+		CF28B8A218F4BA74005C90EE /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B8A118F4BA74005C90EE /* Accounts.framework */; };
+		CF28B8A418F4BAB2005C90EE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B8A318F4BAB2005C90EE /* AdSupport.framework */; };
 		CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BB18E3A91400AEE34F /* Foundation.framework */; };
 		CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */; };
 		CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BF18E3A91400AEE34F /* UIKit.framework */; };
@@ -54,6 +63,16 @@
 		CF24ED6918E4F1980024C696 /* LeakEntity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakEntity.m; sourceTree = "<group>"; };
 		CF26877218E8B3D40003A7DC /* UserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserViewController.h; sourceTree = "<group>"; };
 		CF26877318E8B3D40003A7DC /* UserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserViewController.m; sourceTree = "<group>"; };
+		CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FacebookSDK.framework; sourceTree = "<group>"; };
+		CF28B89318F4AD98005C90EE /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		CF28B89418F4AD98005C90EE /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		CF28B89718F4B020005C90EE /* goleak.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goleak.png; sourceTree = "<group>"; };
+		CF28B89918F4B13E005C90EE /* login-button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "login-button.png"; sourceTree = "<group>"; };
+		CF28B89B18F4B94C005C90EE /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		CF28B89D18F4B963005C90EE /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		CF28B89F18F4B9B0005C90EE /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		CF28B8A118F4BA74005C90EE /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		CF28B8A318F4BAB2005C90EE /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		CF6641B818E3A91400AEE34F /* goleak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goleak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6641BB18E3A91400AEE34F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +104,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF28B8A418F4BAB2005C90EE /* AdSupport.framework in Frameworks */,
+				CF28B8A218F4BA74005C90EE /* Accounts.framework in Frameworks */,
+				CF28B8A018F4B9B0005C90EE /* Social.framework in Frameworks */,
+				CF28B89E18F4B963005C90EE /* Security.framework in Frameworks */,
+				CF28B89C18F4B94C005C90EE /* libsqlite3.dylib in Frameworks */,
+				CF28B89218F4AC7E005C90EE /* FacebookSDK.framework in Frameworks */,
 				CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */,
 				CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */,
 				CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */,
@@ -124,6 +149,8 @@
 				CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */,
 				CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */,
 				CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */,
+				CF28B89318F4AD98005C90EE /* LoginViewController.h */,
+				CF28B89418F4AD98005C90EE /* LoginViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -136,6 +163,15 @@
 				CF24ED6618E4E6DB0024C696 /* LeakCell.xib */,
 			);
 			name = Layout;
+			sourceTree = "<group>";
+		};
+		CF28B89618F4B007005C90EE /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CF28B89918F4B13E005C90EE /* login-button.png */,
+				CF28B89718F4B020005C90EE /* goleak.png */,
+			);
+			name = Images;
 			sourceTree = "<group>";
 		};
 		CF6641AF18E3A91400AEE34F = {
@@ -160,6 +196,12 @@
 		CF6641BA18E3A91400AEE34F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF28B8A318F4BAB2005C90EE /* AdSupport.framework */,
+				CF28B8A118F4BA74005C90EE /* Accounts.framework */,
+				CF28B89F18F4B9B0005C90EE /* Social.framework */,
+				CF28B89D18F4B963005C90EE /* Security.framework */,
+				CF28B89B18F4B94C005C90EE /* libsqlite3.dylib */,
+				CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */,
 				CF6641BB18E3A91400AEE34F /* Foundation.framework */,
 				CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */,
 				CF6641BF18E3A91400AEE34F /* UIKit.framework */,
@@ -171,6 +213,7 @@
 		CF6641C118E3A91400AEE34F /* goleak */ = {
 			isa = PBXGroup;
 			children = (
+				CF28B89618F4B007005C90EE /* Images */,
 				CF8D00DA18EB83E000E52CCC /* OperationResult */,
 				CF8D00D618EB79D100E52CCC /* Service */,
 				CF0DD62118EA250B00418EA4 /* Layout */,
@@ -310,7 +353,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6641D218E3A91400AEE34F /* Main_iPad.storyboard in Resources */,
+				CF28B89A18F4B13E005C90EE /* login-button.png in Resources */,
 				CF6641D718E3A91400AEE34F /* Images.xcassets in Resources */,
+				CF28B89818F4B020005C90EE /* goleak.png in Resources */,
 				CF6641CF18E3A91400AEE34F /* Main_iPhone.storyboard in Resources */,
 				CF6641C618E3A91400AEE34F /* InfoPlist.strings in Resources */,
 				CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */,
@@ -341,6 +386,7 @@
 				CF26877418E8B3D40003A7DC /* UserViewController.m in Sources */,
 				CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */,
 				CF6641C818E3A91400AEE34F /* main.m in Sources */,
+				CF28B89518F4AD98005C90EE /* LoginViewController.m in Sources */,
 				CF8D00DD18EB842700E52CCC /* LeakOperationResult.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -478,6 +524,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/viscardo/GoLeak/goleak,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
 				INFOPLIST_FILE = "goleak/goleak-Info.plist";
@@ -491,6 +541,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					/Users/viscardo/GoLeak/goleak,
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
 				INFOPLIST_FILE = "goleak/goleak-Info.plist";

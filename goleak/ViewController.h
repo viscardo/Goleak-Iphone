@@ -15,4 +15,5 @@
 @property (nonatomic, retain) IBOutlet UITableView *friendsTable;
 @property (nonatomic, retain) NSMutableArray *leaksArray;
 @property (nonatomic, retain) LeakEntity *leakChosen;
+@property (retain, nonatomic) NSString *UserFbId;
 @end

@@ -6,7 +6,7 @@
          contextName = "GLOBAL">
          <PersistentStrings>
             <PersistentString
-               value = "[_item objectForKey:&quot;@LeakText&quot;]">
+               value = "[_item objectForKey:@&quot;UserLeaked&quot;]">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

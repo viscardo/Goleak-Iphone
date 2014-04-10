@@ -11,10 +11,10 @@
 @implementation LeakService
 
 
--(void) GetMyLeakFedd :(int)userId :(id)delegate
+-(void) GetMyLeakFedd :(NSString*)userId :(id)delegate
 {
     
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetMyLeakFedd?userId=1"];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetMyLeakFedd?userId=%@", userId];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     

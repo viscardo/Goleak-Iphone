@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "LeakService.h"
 #import "LeakOperationResult.h"
+#import "AppDelegate.h"
 
 @interface ViewController ()
 
@@ -28,7 +29,10 @@
     //[self.loading startAnimating];
     self.receivedData = [[NSMutableData alloc] init];
     self.friendsTable.dataSource = self;
-    [[LeakService new] GetMyLeakFedd:1 :self  ];
+    
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    [[LeakService new] GetMyLeakFedd: appDelegate.facebookId :self  ];
     
     
     /*

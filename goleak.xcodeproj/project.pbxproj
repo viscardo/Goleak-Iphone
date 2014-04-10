@@ -7,21 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
 		CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */; };
 		CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */; };
 		CF24ED6518E4E5940024C696 /* LeakCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6418E4E5940024C696 /* LeakCell.m */; };
 		CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF24ED6618E4E6DB0024C696 /* LeakCell.xib */; };
 		CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6918E4F1980024C696 /* LeakEntity.m */; };
 		CF26877418E8B3D40003A7DC /* UserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF26877318E8B3D40003A7DC /* UserViewController.m */; };
-		CF28B89218F4AC7E005C90EE /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
 		CF28B89518F4AD98005C90EE /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF28B89418F4AD98005C90EE /* LoginViewController.m */; };
 		CF28B89818F4B020005C90EE /* goleak.png in Resources */ = {isa = PBXBuildFile; fileRef = CF28B89718F4B020005C90EE /* goleak.png */; };
 		CF28B89A18F4B13E005C90EE /* login-button.png in Resources */ = {isa = PBXBuildFile; fileRef = CF28B89918F4B13E005C90EE /* login-button.png */; };
-		CF28B89C18F4B94C005C90EE /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89B18F4B94C005C90EE /* libsqlite3.dylib */; };
-		CF28B89E18F4B963005C90EE /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89D18F4B963005C90EE /* Security.framework */; };
-		CF28B8A018F4B9B0005C90EE /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89F18F4B9B0005C90EE /* Social.framework */; };
-		CF28B8A218F4BA74005C90EE /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B8A118F4BA74005C90EE /* Accounts.framework */; };
-		CF28B8A418F4BAB2005C90EE /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B8A318F4BAB2005C90EE /* AdSupport.framework */; };
 		CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BB18E3A91400AEE34F /* Foundation.framework */; };
 		CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */; };
 		CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BF18E3A91400AEE34F /* UIKit.framework */; };
@@ -104,12 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF28B8A418F4BAB2005C90EE /* AdSupport.framework in Frameworks */,
-				CF28B8A218F4BA74005C90EE /* Accounts.framework in Frameworks */,
-				CF28B8A018F4B9B0005C90EE /* Social.framework in Frameworks */,
-				CF28B89E18F4B963005C90EE /* Security.framework in Frameworks */,
-				CF28B89C18F4B94C005C90EE /* libsqlite3.dylib in Frameworks */,
-				CF28B89218F4AC7E005C90EE /* FacebookSDK.framework in Frameworks */,
+				CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */,
 				CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */,
 				CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */,
 				CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */,

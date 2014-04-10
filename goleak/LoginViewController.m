@@ -7,12 +7,14 @@
 //
 
 #import "LoginViewController.h"
-#import "AppDelegate.h"
-#import <FacebookSDK/FacebookSDK.h>
 #import "ViewController.h"
+#import <FacebookSDK/FacebookSDK.h>
+
+
+#import "AppDelegate.h"
 
 @interface LoginViewController ()
-
+- (IBAction)buttonClicked:(id)sender;
 @end
 
 @implementation LoginViewController
@@ -20,26 +22,15 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
+ 
     return self;
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	
-    // Do any additional setup after loading the view.
+	// Do any additional setup after loading the view.
 }
-
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [self.navigationController setNavigationBarHidden:YES animated:animated];
-    [super viewWillAppear:animated];
-}
-
 
 - (void)didReceiveMemoryWarning
 {
@@ -48,36 +39,35 @@
 }
 
 
-- (IBAction)LogarFacebook:(id)sender {
-    
-    //[self.spinner startAnimating];
-    
-    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate openSession];
-    [self performSegueWithIdentifier:@"segueFacebook" sender:self ];
-    
-    
-}
-
-- (void)loginFailed
+- (IBAction)buttonTouched:(id)sender
 {
-    // User switched back to the app without authorizing. Stay here, but
-    // stop the spinner.
-    //[self.spinner stopAnimating];
-}
-
-
-
-
-
-// This will get called too before the view appears
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    if ([[segue identifier] isEqualToString:@"segueFacebook"])
-    {
-        ViewController *feed = (ViewController *)[segue destinationViewController];
-
+    // If the session state is any of the two "open" states when the button is clicked
+    if (FBSession.activeSession.state == FBSessionStateOpen
+        || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
+        
+        // Close the session and remove the access token from the cache
+        // The session state handler (in the app delegate) will be called automatically
+        [FBSession.activeSession closeAndClearTokenInformation];
+        
+        // If the session state is not any of the two "open" states when the button is clicked
+    } else {
+        // Open a session showing the user the login UI
+        // You must ALWAYS ask for basic_info permissions when opening a session
+        [FBSession openActiveSessionWithReadPermissions:@[@"basic_info"]
+                                           allowLoginUI:YES
+                                      completionHandler:
+         ^(FBSession *session, FBSessionState state, NSError *error) {
+             
+             // Retrieve the app delegate
+             AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+             // Call the app delegate's sessionStateChanged:state:error method to handle session state changes
+             [appDelegate sessionStateChanged:session state:state error:error];
+         }];
+        
     }
 }
+
+
+
 
 @end

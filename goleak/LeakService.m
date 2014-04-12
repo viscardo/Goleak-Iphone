@@ -30,4 +30,25 @@
     
 }
 
+-(void) GetLoginByFacebook :(NSString*)fbId :(NSString*)accesstoken :(id)delegate
+{
+    
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetLoginByFacebook?fbId=%@&accesstoken=%@", fbId, accesstoken];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+    
+    
+}
+
+
+
 @end

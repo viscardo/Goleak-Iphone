@@ -32,7 +32,7 @@
     
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
-    [[LeakService new] GetMyLeakFedd: appDelegate.facebookId :self  ];
+    [[LeakService new] GetMyLeakFedd: appDelegate.userEntity.Id :self  ];
     
     
     /*

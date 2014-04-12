@@ -8,15 +8,19 @@
 
 #import <UIKit/UIKit.h>
 #import "LoginViewController.h"
-
+#import "UserEntity.h"
 #import <FacebookSDK/FacebookSDK.h>
 
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
+@property (nonatomic, strong) NSMutableData *receivedData;
+@property  BOOL *isLogged;
 @property (strong, nonatomic) NSString *facebookId;
+@property (strong, nonatomic) NSString *authToken;
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) LoginViewController *customLoginViewController;
+@property (strong, nonatomic) UserEntity *userEntity;
 
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
 - (void)userLoggedIn;

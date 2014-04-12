@@ -60,5 +60,42 @@
     
     return self;
 }
+
+
+
+-(id)initWithUser:(NSData *)data
+{
+    self = [super init];
+    
+    if(self)
+    {
+        leaks = [[NSMutableArray alloc] init];
+        NSError *myError = nil;
+        NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&myError];
+        
+
+            @try {
+                // Try something
+
+                UserEntity * d = [[UserEntity alloc]init];
+                
+                d.Id = [res objectForKey:@"Id"];
+                d.FirstName = [res objectForKey:@"FirstName"];
+                d.LastName = [res objectForKey:@"LastName"];
+                d.FacebookId = [res objectForKey:@"Fb"];
+                d.PicUrl=[ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", d.FacebookId];
+                
+                self.userEntity = d;
+                
+            }
+            @catch (NSException * e) {
+                NSLog(@"Exception: %@", e);
+            }
+            
+        
+    }
+    
+    return self;
+}
 @end
 

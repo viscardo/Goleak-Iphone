@@ -10,9 +10,8 @@
 #import <FacebookSDK/FacebookSDK.h>
 #import "LoginViewController.h"
 #import "ViewController.h"
-#import "LeakService.h"
 #import "UserEntity.h"
-#import "LeakOperationResult.h"
+
 
 @implementation AppDelegate
 
@@ -141,12 +140,9 @@
              _facebookId = [result objectForKey:@"id"];
              
              _authToken = [[[FBSession activeSession] accessTokenData] accessToken];
-
-             //Colocar o chamado em uma outra view e entao redirecionar
-             [[LeakService new] GetLoginByFacebook :_facebookId :_authToken :self  ];
-             
+         
              UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-             UITabBarController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
+             LoginViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewId"];
              self.facebookId =_facebookId;
              [(UINavigationController*)self.window.rootViewController pushViewController:ivc animated:NO];
 
@@ -184,33 +180,6 @@
     [FBAppCall handleDidBecomeActive];
 }
 
-
-- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
-{
-    [self.receivedData appendData:data];
-}
-
-- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
-{
-    NSLog(@"didReceiveResponse: %@", [response MIMEType] );
-}
-
-- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
-{
-    NSLog(@"didFailWithError");
-    NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
-}
-
-- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
-    NSLog(@"connectionDidFinishLoading");
-    
-    LeakOperationResult *opr = [[LeakOperationResult alloc]initWithUser:self.receivedData];
-    
-    self.userEntity = opr.userEntity;
-    
-    
-
-}
 
 
 

@@ -150,12 +150,30 @@
     cell.timeLeaked.text = leak.timeLeaked;
     cell.genderLeak.text = leak.genderLeak;
     
-    id path = leak.pictureUrl;
-    NSURL *url = [NSURL URLWithString:path];
-    NSData *data = [NSData dataWithContentsOfURL:url];
-    UIImage *img = [[UIImage alloc] initWithData:data];
+    cell.trueOpinion.text = [ NSString stringWithFormat:@"%@ True", leak.likes];
+    cell.falseOpinion.text = [ NSString stringWithFormat:@"%@ False", leak.dislikes];
     
-    cell.UserLeakedImage.image  = img;
+
+    //NSURL *url = [NSURL URLWithString:path];
+    //NSData *data = [NSData dataWithContentsOfURL:url];
+    //UIImage *img = [[UIImage alloc] initWithData:data];
+    
+    //cell.UserLeakedImage.image  = img;
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
+    
+    dispatch_async(queue, ^{
+        
+            id path = leak.pictureUrl;
+        NSURL *url = [NSURL URLWithString:path];
+        NSData *data = [NSData dataWithContentsOfURL:url];
+        UIImage *img = [[UIImage alloc] initWithData:data];
+        
+        dispatch_sync(dispatch_get_main_queue(), ^{
+            cell.UserLeakedImage.image = img;
+            //[cell.loading stopAnimating];
+        });
+    });
     
 
     return cell;

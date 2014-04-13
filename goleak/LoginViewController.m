@@ -9,12 +9,14 @@
 #import "LoginViewController.h"
 #import "ViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
-
-
+#import "LeakService.h"
+#import "LeakService.h"
+#import "LeakOperationResult.h"
 #import "AppDelegate.h"
 
 @interface LoginViewController ()
 - (IBAction)buttonClicked:(id)sender;
+@property (nonatomic, strong) NSMutableData *receivedData;
 @end
 
 @implementation LoginViewController
@@ -22,12 +24,21 @@
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
- 
+
     return self;
 }
 
 - (void)viewDidLoad
 {
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    if(appDelegate.facebookId != nil && appDelegate.authToken != nil)
+    {
+            self.receivedData = [[NSMutableData alloc] init];
+        //Colocar o chamado em uma outra view e entao redirecionar
+        [[LeakService new] GetLoginByFacebook :appDelegate.facebookId : appDelegate.authToken :self  ];
+    }
+    
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 }
@@ -67,6 +78,40 @@
     }
 }
 
+
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.receivedData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSLog(@"didReceiveResponse: %@", [response MIMEType] );
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError");
+    NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"connectionDidFinishLoading");
+    
+    LeakOperationResult *opr = [[LeakOperationResult alloc]initWithUser:self.receivedData];
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    
+    appDelegate.userEntity = opr.userEntity;
+    
+    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+UITabBarController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
+    [self presentViewController:monitorMenuViewController animated:NO completion:nil];
+    
+    
+    //UITabBarController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
+    //[(UINavigationController*)appDelegate.window.rootViewController pushViewController:ivc animated:NO  ];
+    
+}
 
 
 

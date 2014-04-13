@@ -35,18 +35,19 @@
 
     if(self.leakChosen) {
         self.navigationItem.title = leakChosen.userName;
-        _NumberOfLeaks.text = leakChosen.genderLeak;
+        _NumberOfLeaks.text = leakChosen.userName;
 
-        
+        NSOperationQueue *queue = [NSOperationQueue new];
+        NSInvocationOperation *operation = [[NSInvocationOperation alloc]
+                                            initWithTarget:self
+                                            selector:@selector(loadImage:)
+                                            object:leakChosen.pictureUrl];
+         [queue addOperation:operation];
     }
 
     
-    NSOperationQueue *queue = [NSOperationQueue new];
-    NSInvocationOperation *operation = [[NSInvocationOperation alloc]
-                                        initWithTarget:self
-                                        selector:@selector(loadImage:)
-                                        object:leakChosen.pictureUrl];
-    [queue addOperation:operation];
+
+   
 }
 
 - (void)didReceiveMemoryWarning

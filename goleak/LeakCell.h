@@ -19,4 +19,8 @@
 @property (nonatomic, strong) IBOutlet UILabel *timeLeaked;
 @property (nonatomic, strong) IBOutlet UIImageView *UserLeakedImage;
 
+@property (nonatomic, strong) IBOutlet UILabel *trueOpinion;
+
+@property (nonatomic, strong) IBOutlet UILabel *falseOpinion;
+
 @end

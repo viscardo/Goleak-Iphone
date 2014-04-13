@@ -33,7 +33,7 @@
            
             
             NSString *fb = [[item objectForKey:@"UserLeaked"] objectForKey:@"Fb"];
-            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%d/picture", fb];
+            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", fb];
             
           
             
@@ -83,7 +83,11 @@
                 d.FirstName = [res objectForKey:@"FirstName"];
                 d.LastName = [res objectForKey:@"LastName"];
                 d.FacebookId = [res objectForKey:@"Fb"];
-                d.PicUrl=[ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", d.FacebookId];
+                NSString *fbuid = d.FacebookId;
+                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture", fbuid]];
+                
+                d.PicUrl= url.path;
+                //[ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", d.FacebookId];
                 
                 self.userEntity = d;
                 

@@ -14,7 +14,7 @@
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
-@property (nonatomic, strong) NSMutableData *receivedData;
+
 @property  BOOL *isLogged;
 @property (strong, nonatomic) NSString *facebookId;
 @property (strong, nonatomic) NSString *authToken;

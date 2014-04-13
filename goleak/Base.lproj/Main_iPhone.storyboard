@@ -20,6 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="vXZ-lx-hvc" id="vkc-Yc-4Kk"/>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="VfQ-9k-pMa"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -92,14 +96,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Es3-vz-f6h">
-                                <rect key="frame" x="76" y="92" width="148" height="21"/>
+                                <rect key="frame" x="86" y="92" width="148" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.3398660261" green="0.55654830960000001" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ntp-uD-qZ1">
-                                <rect key="frame" x="258" y="88" width="42" height="30"/>
+                                <rect key="frame" x="272" y="88" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -198,7 +201,7 @@
         <!--Login View Controller-->
         <scene sceneID="uEn-hs-aCV">
             <objects>
-                <viewController id="ejm-DC-dU0" customClass="LoginViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewId" id="ejm-DC-dU0" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Xm6-O8-Xic"/>
                         <viewControllerLayoutGuide type="bottom" id="r1G-YF-69J"/>
@@ -277,6 +280,7 @@
         <!--Navigation Controller-->
         <scene sceneID="nWi-My-20W">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="m3O-fL-VqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="aVr-hZ-Jiq" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Lq-Se-7pu">
@@ -288,9 +292,8 @@
                         <segue destination="ejm-DC-dU0" kind="relationship" relationship="rootViewController" id="wzi-DE-G7v"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="m3O-fL-VqW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="311" y="-99"/>
+            <point key="canvasLocation" x="203" y="-61"/>
         </scene>
     </scenes>
     <resources>

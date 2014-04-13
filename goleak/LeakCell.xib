@@ -45,14 +45,30 @@
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VOn-Vf-zrs">
+                        <rect key="frame" x="89" y="88" width="70" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGw-gG-KIY">
+                        <rect key="frame" x="190" y="88" width="70" height="21"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <color key="textColor" red="0.0" green="0.74019191576086962" blue="6.0706480040404364e-05" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
             </tableViewCellContentView>
             <connections>
                 <outlet property="UserLeakedImage" destination="2ZZ-hM-oOJ" id="wmY-8d-o5U"/>
                 <outlet property="UserName" destination="Xmr-El-ujN" id="VLJ-1X-5MN"/>
+                <outlet property="falseOpinion" destination="VOn-Vf-zrs" id="d95-pc-egm"/>
                 <outlet property="genderLeak" destination="v5C-hN-CF5" id="vGM-nw-4ri"/>
                 <outlet property="leakText" destination="Hbf-QI-B31" id="Hwz-r0-Skh"/>
                 <outlet property="timeLeaked" destination="XUf-dz-14L" id="xqa-tJ-fFx"/>
+                <outlet property="trueOpinion" destination="oGw-gG-KIY" id="Ry5-cb-GQE"/>
             </connections>
         </tableViewCell>
     </objects>

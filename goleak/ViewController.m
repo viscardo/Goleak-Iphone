@@ -143,7 +143,6 @@
             }
         }
         
-        
     }
     cell.UserName.text = leak.userName;
     cell.leakText.text = leak.leakText;

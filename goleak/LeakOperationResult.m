@@ -40,7 +40,7 @@
             LeakEntity * d = [[LeakEntity alloc]init];
 
             d.userName = [[item objectForKey:@"UserLeaked"] objectForKey:@"FirstName"] ;
-            
+            d.userId = [[item objectForKey:@"UserLeaked"] objectForKey:@"Id"] ;
             d.leakText = [item objectForKey:@"LeakText"];
             d.genderLeak = [item objectForKey:@"GenderLeak"];
             d.timeLeaked = [item objectForKey:@"CreatedOn"] ;
@@ -61,6 +61,51 @@
     return self;
 }
 
+-(id)initWithFriends:(NSData *)data
+{
+    self = [super init];
+    
+    if(self)
+    {
+        leaks = [[NSMutableArray alloc] init];
+        NSError *myError = nil;
+        NSArray *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&myError];
+        
+        for(NSDictionary *item in res) {
+            
+            
+            @try {
+                // Try something
+                
+                
+                NSString *fb = [[item objectForKey:@"UserLeaked"] objectForKey:@"Fb"];
+                NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", fb];
+                
+                
+                
+                UserEntity * d = [[UserEntity alloc]init];
+                
+                d.Id = [item objectForKey:@"Id"];
+
+                d.FirstName = [item objectForKey:@"FirstName"];
+                d.LastName = [item objectForKey:@"LastName"];
+                
+                d.FacebookId = [item objectForKey:@"Fb"] ;
+                d.PicUrl = avatar; ;
+
+                
+                [self.friends addObject:d];
+                
+            }
+            @catch (NSException * e) {
+                NSLog(@"Exception: %@", e);
+            }
+            
+        }
+    }
+    
+    return self;
+}
 
 
 -(id)initWithUser:(NSData *)data

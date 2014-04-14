@@ -10,15 +10,20 @@
 
 @interface LeakEntity : NSObject
 {
-    NSString *id;
+
     NSString *userName;
+    NSString *userId;
+    NSString *codigo;
     NSString *pictureUrl;
     NSString *genderLeak;
     NSString *leakText;
     NSString *timeLeaked;
+    NSString *likes;
+    NSString *dislikes;
    
 }
 
+@property (nonatomic, retain) NSString *userId;
 @property (nonatomic, retain) NSString *codigo;
 @property (nonatomic, retain) NSString *userName;
 @property (nonatomic, retain) NSString *pictureUrl;

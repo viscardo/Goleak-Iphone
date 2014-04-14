@@ -10,5 +10,5 @@
 
 @implementation LeakEntity
 
-@synthesize leakText, pictureUrl, timeLeaked, genderLeak, codigo, likes, dislikes, userName;
+@synthesize leakText, pictureUrl, timeLeaked, genderLeak, codigo, likes, dislikes, userName, userId;
 @end

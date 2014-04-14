@@ -19,6 +19,8 @@
 
 @property (nonatomic, strong) NSMutableArray *leaksArray;
 
+@property (nonatomic, retain) IBOutlet UITableView *friendsTable;
+
 
 
 

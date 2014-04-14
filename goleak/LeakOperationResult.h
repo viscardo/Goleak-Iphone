@@ -12,6 +12,7 @@
 @interface LeakOperationResult : NSObject
 
 @property (nonatomic, strong)  NSMutableArray *leaks;
+@property (nonatomic, strong)  NSMutableArray *friends;
 @property (strong, nonatomic) UserEntity *userEntity;
 
 -(id) initWithLeakFeed:(NSData *)data;

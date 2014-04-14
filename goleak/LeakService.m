@@ -49,6 +49,72 @@
     
 }
 
+-(void) GetFriends :(NSString*) userId :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetFriends?id=%@", userId];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
+-(void) GetLike :(NSString*) leakId :(NSString*)  userId :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetLike?LeakId=%@&userId=%@", leakId, userId];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
+-(void) GetDislike :(NSString*) leakId :(NSString*)  userId :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetDislike?LeakId=%@&userId=%@", leakId, userId];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
+
+-(void) GetCreateLeak :(NSString*) LeakText :(NSString*) UserLeakedId :(NSString*)  userId :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetCreateLeak?LeakText=%@&UserLeakedId=%@&userId=%@", LeakText, UserLeakedId, userId];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
+
 
 
 @end

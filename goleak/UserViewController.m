@@ -42,7 +42,7 @@
         self.navigationItem.title = leakChosen.userName;
         _NumberOfLeaks.text = leakChosen.userName;
         
-        [[LeakService new] GetMyLeakFedd: leakChosen.userId :self  ];
+        [[LeakService new] GetLeaksOnMe: leakChosen.userId :self  ];
 
         NSOperationQueue *queue = [NSOperationQueue new];
         NSInvocationOperation *operation = [[NSInvocationOperation alloc]

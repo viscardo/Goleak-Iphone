@@ -78,7 +78,7 @@
                 // Try something
                 
                 
-                NSString *fb = [[item objectForKey:@"UserLeaked"] objectForKey:@"Fb"];
+                NSString *fb = [item objectForKey:@"Fb"];
                 NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", fb];
                 
                 
@@ -94,7 +94,7 @@
                 d.PicUrl = avatar; ;
 
                 
-                [self.friends addObject:d];
+                [self.leaks addObject:d];
                 
             }
             @catch (NSException * e) {
@@ -146,5 +146,37 @@
     
     return self;
 }
+
+
+
+-(id)initWithBoolResult:(NSData *)data
+{
+    self = [super init];
+    
+    if(self)
+    {
+        leaks = [[NSMutableArray alloc] init];
+        NSError *myError = nil;
+        NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&myError];
+        
+        
+        @try {
+            // Try something
+            
+            
+            
+            self.result = true;
+            
+        }
+        @catch (NSException * e) {
+            NSLog(@"Exception: %@", e);
+        }
+        
+        
+    }
+    
+    return self;
+}
+
 @end
 

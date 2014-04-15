@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "LeakCell.h"
 #import "LeakEntity.h"
-#import "UserViewController.h"
+#import "ListLeakViewController.h"
 
 @interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 @property (nonatomic, retain) IBOutlet UITableView *friendsTable;

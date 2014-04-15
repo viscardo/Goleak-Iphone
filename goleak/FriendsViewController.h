@@ -7,7 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserViewController.h"
+#import "UserEntity.h"
 
-@interface FriendsViewController : UIViewController
+@interface FriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+
+@property (nonatomic, retain) IBOutlet UITableView *friendsTable;
+@property (nonatomic, retain) NSMutableArray *leaksArray;
+@property (nonatomic, retain) UserEntity *friendChosen;
+@property (retain, nonatomic) NSString *UserFbId;
 
 @end

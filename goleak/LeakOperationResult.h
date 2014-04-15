@@ -13,9 +13,14 @@
 
 @property (nonatomic, strong)  NSMutableArray *leaks;
 @property (nonatomic, strong)  NSMutableArray *friends;
+@property bool *result;
 @property (strong, nonatomic) UserEntity *userEntity;
 
 -(id) initWithLeakFeed:(NSData *)data;
--(id)initWithUser:(NSData *)data;
+-(id) initWithUser:(NSData *)data;
+
+-(id) initWithFriends:(NSData *)data;
+
+-(id)initWithBoolResult:(NSData *)data;
 
 @end

@@ -12,3 +12,5 @@
 
 @synthesize leakText, pictureUrl, timeLeaked, genderLeak, codigo, likes, dislikes, userName, userId;
 @end
+
+

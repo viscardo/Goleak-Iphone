@@ -10,6 +10,8 @@
 #import "LeakCell.h"
 #import "LeakService.h"
 #import "LeakOperationResult.h"
+#import "ListLeakViewController.h"
+#import "LeakViewController.h"
 
 @interface UserViewController ()
 @property (nonatomic, strong) NSMutableData *receivedData;
@@ -18,7 +20,7 @@
 
 @implementation UserViewController
 
-@synthesize leakChosen;
+@synthesize UserChosen, leakChosen;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -36,19 +38,19 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
 
-    if(self.leakChosen) {
+    if(self.UserChosen) {
             self.receivedData = [[NSMutableData alloc] init];
             self.friendsTable.dataSource = self;
-        self.navigationItem.title = leakChosen.userName;
-        _NumberOfLeaks.text = leakChosen.userName;
+        self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", UserChosen.FirstName, UserChosen.LastName ];
+        _NumberOfLeaks.text = [NSString stringWithFormat:@"%@ %@", UserChosen.FirstName, UserChosen.LastName ];
         
-        [[LeakService new] GetLeaksOnMe: leakChosen.userId :self  ];
+        [[LeakService new] GetLeaksOnMe :UserChosen.Id :self  ];
 
         NSOperationQueue *queue = [NSOperationQueue new];
         NSInvocationOperation *operation = [[NSInvocationOperation alloc]
                                             initWithTarget:self
                                             selector:@selector(loadImage:)
-                                            object:leakChosen.pictureUrl];
+                                            object:UserChosen.PicUrl];
          [queue addOperation:operation];
     }
 
@@ -116,7 +118,7 @@
     
     leakChosen = [self.leaksArray objectAtIndex:indexPath.row];
     
-    [self performSegueWithIdentifier:@"segueUser" sender:self ];
+    [self performSegueWithIdentifier:@"segueUserLeak" sender:self ];
     
 }
 
@@ -124,13 +126,26 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    if ([[segue identifier] isEqualToString:@"segueUser"])
+    if ([[segue identifier] isEqualToString:@"segueUserLeak"])
     {
-        UserViewController *UserVC = (UserViewController *)[segue destinationViewController];
+        ListLeakViewController *UserVC = (ListLeakViewController *)[segue destinationViewController];
         
         UserVC.leakChosen = leakChosen;
         
     }
+    if ([[segue identifier] isEqualToString:@"segueLeak"])
+    {
+        LeakViewController *UserVC = (LeakViewController *)[segue destinationViewController];
+        
+        UserVC.UserChosen = [[UserEntity alloc]init];
+        UserVC.UserChosen.Id = UserChosen.Id;
+        UserVC.UserChosen.PicUrl = UserChosen.PicUrl;
+        UserVC.UserChosen.FirstName = UserChosen.FirstName;
+        UserVC.UserChosen.LastName = UserChosen.LastName;
+        UserVC.UserChosen.FacebookId = UserChosen.FacebookId;
+        
+    }
+    
     
 }
 
@@ -190,12 +205,18 @@
     
     return cell;
 }
+- (IBAction)buttonLeakTouched:(id)sender {
+    
+        [self performSegueWithIdentifier:@"segueLeak" sender:self ];
+}
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 
 @end

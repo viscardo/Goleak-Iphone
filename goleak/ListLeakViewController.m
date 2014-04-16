@@ -73,12 +73,13 @@
 }
 
 - (IBAction)buttonFalseTouched:(id)sender {
-
+        self.receivedData = [[NSMutableData alloc] init];
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     [[LeakService new] GetDislike :self.leakChosen.codigo :appDelegate.userEntity.Id :self  ];
 }
 
 - (IBAction)buttonTrueTouched:(id)sender {
+            self.receivedData = [[NSMutableData alloc] init];
     
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     [[LeakService new] GetLike :self.leakChosen.codigo :appDelegate.userEntity.Id :self  ];
@@ -112,7 +113,18 @@
     if(opr.result)
     {
         [[[UIAlertView alloc] initWithTitle:@"Oh Yes!"
-                                    message:@"You gave your opinion."
+                                    message:opr.Message
+                                   delegate:self
+                          cancelButtonTitle:@"OK!"
+                          otherButtonTitles:nil] show];
+        
+        [self performSegueWithIdentifier:@"segueBackFeed" sender:self ];
+    }
+    else
+    {
+        
+        [[[UIAlertView alloc] initWithTitle:@"Oh No!"
+                                    message:opr.Message
                                    delegate:self
                           cancelButtonTitle:@"OK!"
                           otherButtonTitles:nil] show];

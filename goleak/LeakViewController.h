@@ -7,7 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserEntity.h"
 
 @interface LeakViewController : UIViewController
+
+@property (nonatomic, strong) UserEntity *UserChosen;
+@property (weak, nonatomic) IBOutlet UIImageView *UserImage;
+@property (weak, nonatomic) IBOutlet UILabel *UserName;
+@property (weak, nonatomic) IBOutlet UITextField *LeakText;
+@property (weak, nonatomic) IBOutlet UIButton *ButtonLeak;
+- (IBAction)textFieldDismiss:(id)sender;
 
 @end

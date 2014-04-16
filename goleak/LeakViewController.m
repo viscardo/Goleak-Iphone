@@ -7,12 +7,22 @@
 //
 
 #import "LeakViewController.h"
+#import "LeakService.h"
+#import "LeakOperationResult.h"
+#import "UserViewController.h"
+#import "AppDelegate.h"
 
 @interface LeakViewController ()
 
+@property (nonatomic, strong) NSMutableData *receivedData;
+
 @end
 
+
+
 @implementation LeakViewController
+
+@synthesize UserChosen;
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -27,6 +37,39 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    if(self.UserChosen) {
+        self.receivedData = [[NSMutableData alloc] init];
+
+        //self.navigationItem.title = [NSString stringWithFormat:@"%@ %@", UserChosen.FirstName, UserChosen.LastName ];
+        _UserName.text = [NSString stringWithFormat:@"%@ %@", UserChosen.FirstName, UserChosen.LastName ];
+        
+
+        
+        NSOperationQueue *queue = [NSOperationQueue new];
+        NSInvocationOperation *operation = [[NSInvocationOperation alloc]
+                                            initWithTarget:self
+                                            selector:@selector(loadImage:)
+                                            object:UserChosen.PicUrl];
+        [queue addOperation:operation];
+    }
+}
+
+- (void)loadImage: (NSString *)url {
+    NSData* imageData = [[NSData alloc] initWithContentsOfURL:[NSURL URLWithString:url]];
+    UIImage* image = [[UIImage alloc] initWithData:imageData];
+    
+    [self performSelectorOnMainThread:@selector(displayImage:) withObject:image waitUntilDone:NO];
+}
+
+- (void)displayImage:(UIImage *)image {
+    [_UserImage  setImage:image];
+    //[loading stopAnimating];
+}
+
+- (IBAction)buttonLeakTouched:(id)sender {
+    
+    AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    [[LeakService new] GetCreateLeak : _LeakText.text  :UserChosen.Id :appDelegate.userEntity.Id :self  ];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,4 +78,54 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
+{
+    [self.receivedData appendData:data];
+}
+
+- (void)connection:(NSURLConnection *)connection didReceiveResponse:(NSURLResponse *)response
+{
+    NSLog(@"didReceiveResponse: %@", [response MIMEType] );
+}
+
+- (void)connection:(NSURLConnection *)connection didFailWithError:(NSError *)error
+{
+    NSLog(@"didFailWithError");
+    NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
+}
+
+- (void)connectionDidFinishLoading:(NSURLConnection *)connection {
+    NSLog(@"connectionDidFinishLoading");
+    //NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
+    
+    //[self.loading stopAnimating];
+    
+    LeakOperationResult * opr = [[LeakOperationResult alloc]initWithBoolResult :self.receivedData];
+    
+    if(opr.result)
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Oh Yes!"
+                                    message:opr.Message
+                                   delegate:self
+                          cancelButtonTitle:@"OK!"
+                          otherButtonTitles:nil] show];
+        
+        [self performSegueWithIdentifier:@"segueLeakBackUser" sender:self ];
+    }
+    else
+    {
+        
+        [[[UIAlertView alloc] initWithTitle:@"Oh No!"
+                                    message:opr.Message
+                                   delegate:self
+                          cancelButtonTitle:@"OK!"
+                          otherButtonTitles:nil] show];
+    }
+    
+    
+}
+
+- (IBAction)textFieldDismiss:(id)sender {
+    [_LeakText resignFirstResponder ];
+}
 @end

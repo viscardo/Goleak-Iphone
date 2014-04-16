@@ -13,7 +13,7 @@
 
 
 
-@synthesize leaks;
+@synthesize leaks, result, Message;
 
 -(id)initWithLeakFeed:(NSData *)data
 {
@@ -162,10 +162,9 @@
         
         @try {
             // Try something
-            
-            
-            
-            self.result = true;
+            self.result = [[res objectForKey:@"Sucess"] boolValue];
+            self.Message = [res objectForKey:@"Message"];
+
             
         }
         @catch (NSException * e) {

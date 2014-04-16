@@ -14,6 +14,7 @@
 @property (nonatomic, strong)  NSMutableArray *leaks;
 @property (nonatomic, strong)  NSMutableArray *friends;
 @property bool *result;
+@property (nonatomic, strong)  NSString *Message;
 @property (strong, nonatomic) UserEntity *userEntity;
 
 -(id) initWithLeakFeed:(NSData *)data;

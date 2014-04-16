@@ -92,12 +92,16 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    if ([[segue identifier] isEqualToString:@"segueUser"])
+    if ([[segue identifier] isEqualToString:@"segueFriend"])
     {
         UserViewController *UserVC = (UserViewController *)[segue destinationViewController];
         
-        UserVC.leakChosen = [[LeakEntity alloc]init];
-        UserVC.leakChosen.userId = friendChosen.Id;
+        UserVC.UserChosen = [[UserEntity alloc]init];
+        UserVC.UserChosen.Id = friendChosen.Id;
+        UserVC.UserChosen.PicUrl = friendChosen.PicUrl;
+        UserVC.UserChosen.FirstName = friendChosen.FirstName;
+        UserVC.UserChosen.LastName = friendChosen.LastName;
+        UserVC.UserChosen.FacebookId = friendChosen.FacebookId;
         
     }
     

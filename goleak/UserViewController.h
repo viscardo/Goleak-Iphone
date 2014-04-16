@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserEntity.h"
 #import "LeakEntity.h"
 
 @interface UserViewController : UIViewController
 
+@property (nonatomic, strong) UserEntity *UserChosen;
 @property (nonatomic, strong) LeakEntity *leakChosen;
 
 @property (weak, nonatomic) IBOutlet UILabel *NumberOfLeaks;
@@ -20,6 +22,8 @@
 @property (nonatomic, strong) NSMutableArray *leaksArray;
 
 @property (nonatomic, retain) IBOutlet UITableView *friendsTable;
+
+@property (strong, nonatomic) IBOutlet UIButton *leakButton;
 
 
 

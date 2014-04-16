@@ -120,14 +120,16 @@
 
 -(void) GetCreateLeak :(NSString*) LeakText :(NSString*) UserLeakedId :(NSString*)  userId :(id)delegate
 {
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetCreateLeak?LeakText=%@&UserLeakedId=%@&userId=%@", LeakText, UserLeakedId, userId];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostCreateLeak?LeakText=%@&UserLeakedId=%@&userId=%@", LeakText, UserLeakedId, userId];
     
-    NSURL *url = [NSURL URLWithString: urlConcat];
+
+    NSString *encodedString = [urlConcat stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSURL *url = [[NSURL alloc] initWithString:encodedString];
     
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     

@@ -166,11 +166,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mhc-TU-MNQ"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c7k-3c-dYe">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="JYe-jf-j9J">
-                                <rect key="frame" x="0.0" y="139" width="320" height="434"/>
+                                <rect key="frame" x="0.0" y="139" width="320" height="483"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
@@ -229,11 +229,11 @@
                         <viewControllerLayoutGuide type="bottom" id="rY1-u3-RPa"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5mk-ZS-6sU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaO-xo-Axe">
-                                <rect key="frame" x="0.0" y="62" width="130" height="130"/>
+                                <rect key="frame" x="0.0" y="62" width="130" height="179"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your leak" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jny-Fk-Oa2">
@@ -410,8 +410,8 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jh4-Jj-WXS"/>
         <segue reference="H7f-jt-Ivp"/>
+        <segue reference="jh4-Jj-WXS"/>
         <segue reference="t5C-eF-jzv"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aVr-hZ-Jiq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="aVr-hZ-Jiq">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
         <!--View Controller - Leak Feed-->
@@ -31,7 +31,7 @@
                     <navigationItem key="navigationItem" title="Leak Feed" id="jS6-kp-2Jp"/>
                     <connections>
                         <outlet property="friendsTable" destination="tiy-Vc-hZS" id="u7R-H9-spz"/>
-                        <segue destination="NRt-cA-OtW" kind="push" identifier="segueLeak" id="1xs-dd-F81"/>
+                        <segue destination="NRt-cA-OtW" kind="push" identifier="segueLeak" id="2c0-0v-gLa"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
@@ -51,7 +51,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AJY-mn-8v2">
-                                <rect key="frame" x="0.0" y="72" width="94" height="130"/>
+                                <rect key="frame" x="0.0" y="72" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-tw-zkY">
@@ -88,10 +88,10 @@
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zRM-K6-b5H">
                                 <rect key="frame" x="102" y="132" width="198" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9b-54-ukX">
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Someone said about" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W9b-54-ukX">
                                 <rect key="frame" x="102" y="77" width="198" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -114,7 +114,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4h1-94-jAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="-78"/>
+            <point key="canvasLocation" x="2767" y="10"/>
         </scene>
         <!--Friends View Controller - Friends-->
         <scene sceneID="QuK-sk-bjm">
@@ -150,12 +150,12 @@
                     </navigationItem>
                     <connections>
                         <outlet property="friendsTable" destination="5i4-eo-So2" id="gk8-t1-Q33"/>
-                        <segue destination="RUw-Nm-Fe7" kind="push" identifier="segueFriend" id="7E4-Ue-cG7"/>
+                        <segue destination="RUw-Nm-Fe7" kind="push" identifier="segueFriend" id="KqJ-8O-7Hu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZLv-uY-0lh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1173" y="642"/>
+            <point key="canvasLocation" x="1181" y="790"/>
         </scene>
         <!--User View Controller - Nome Leak-->
         <scene sceneID="Hr6-B8-58S">
@@ -199,7 +199,6 @@
                                 </state>
                                 <connections>
                                     <action selector="buttonLeakTouched:" destination="RUw-Nm-Fe7" eventType="touchUpInside" id="YOi-Y9-ay8"/>
-                                    <segue destination="Q4h-Pu-cCc" kind="push" identifier="segueLeak" id="cKH-h6-Ln7"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -213,12 +212,12 @@
                         <outlet property="UserImage" destination="Wbn-jR-oSn" id="Qm5-VX-hWs"/>
                         <outlet property="friendsTable" destination="JYe-jf-j9J" id="nzq-1F-Q7q"/>
                         <outlet property="leakButton" destination="Ntp-uD-qZ1" id="H5E-ZQ-KRN"/>
-                        <segue destination="NRt-cA-OtW" kind="push" identifier="segueUserLeak" id="jh4-Jj-WXS"/>
+                        <segue destination="Q4h-Pu-cCc" kind="push" identifier="segueLeak" id="aHY-id-yQj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lCO-Ch-56f" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2829" y="691"/>
+            <point key="canvasLocation" x="1953" y="790"/>
         </scene>
         <!--Leak View Controller - Leak this user-->
         <scene sceneID="Lkt-wN-7cf">
@@ -233,7 +232,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZaO-xo-Axe">
-                                <rect key="frame" x="0.0" y="62" width="130" height="179"/>
+                                <rect key="frame" x="0.0" y="62" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Write your leak" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jny-Fk-Oa2">
@@ -260,7 +259,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="User Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksG-z5-qja">
-                                <rect key="frame" x="138" y="116" width="162" height="21"/>
+                                <rect key="frame" x="118" y="101" width="162" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -276,12 +275,12 @@
                         <outlet property="LeakText" destination="Jny-Fk-Oa2" id="4wt-Ku-dLa"/>
                         <outlet property="UserImage" destination="ZaO-xo-Axe" id="qoC-7N-l8v"/>
                         <outlet property="UserName" destination="ksG-z5-qja" id="8JP-ag-GJb"/>
-                        <segue destination="RUw-Nm-Fe7" kind="push" identifier="segueLeakBackUser" id="H7f-jt-Ivp"/>
+                        <segue destination="RUw-Nm-Fe7" kind="push" identifier="segueLeakBackUser" id="W4K-5t-gGL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0hs-L9-VXw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3502" y="260"/>
+            <point key="canvasLocation" x="2750" y="790"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="5wF-Zm-kXp">
@@ -341,7 +340,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYr-xG-oX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="696" y="-99"/>
+            <point key="canvasLocation" x="696" y="-71"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mdn-Bz-p3I">
@@ -380,7 +379,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YZc-0g-LXr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="660" y="590"/>
+            <point key="canvasLocation" x="676" y="790"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nWi-My-20W">
@@ -410,8 +409,7 @@
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="H7f-jt-Ivp"/>
-        <segue reference="jh4-Jj-WXS"/>
+        <segue reference="W4K-5t-gGL"/>
         <segue reference="t5C-eF-jzv"/>
     </inferredMetricsTieBreakers>
 </document>

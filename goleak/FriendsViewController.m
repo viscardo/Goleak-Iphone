@@ -41,6 +41,12 @@
      
 }
 
+- (void)viewDidAppear
+{
+       [super viewDidLoad];
+    
+}
+
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {

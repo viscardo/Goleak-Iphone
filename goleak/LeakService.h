@@ -10,7 +10,7 @@
 
 @interface LeakService : NSObject
 
--(void) GetMyLeakFedd :(int)userId :(id)delegate;
+-(void) GetMyLeakFedd :(NSString*)userId :(id)delegate;
 -(void) GetLoginByFacebook :(NSString*)fbId :(NSString*)accesstoken :(id)delegate;
 -(void) GetLeaksOnMe :(NSString*)userId :(id)delegate;
 -(void) GetFriends :(NSString*)Id :(id)delegate;

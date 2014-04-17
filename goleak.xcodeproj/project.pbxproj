@@ -38,6 +38,7 @@
 		CF6641EA18E3A91400AEE34F /* goleakTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CF6641E918E3A91400AEE34F /* goleakTests.m */; };
 		CF8D00D918EB7A4800E52CCC /* LeakService.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8D00D818EB7A4800E52CCC /* LeakService.m */; };
 		CF8D00DD18EB842700E52CCC /* LeakOperationResult.m in Sources */ = {isa = PBXBuildFile; fileRef = CF8D00DC18EB842700E52CCC /* LeakOperationResult.m */; };
+		CFA92DC818FF761000B4F112 /* goleak_120.png in Resources */ = {isa = PBXBuildFile; fileRef = CFA92DC718FF761000B4F112 /* goleak_120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		CF8D00D818EB7A4800E52CCC /* LeakService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakService.m; sourceTree = "<group>"; };
 		CF8D00DB18EB842700E52CCC /* LeakOperationResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakOperationResult.h; sourceTree = "<group>"; };
 		CF8D00DC18EB842700E52CCC /* LeakOperationResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakOperationResult.m; sourceTree = "<group>"; };
+		CFA92DC718FF761000B4F112 /* goleak_120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = goleak_120.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 		CF28B89618F4B007005C90EE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CFA92DC718FF761000B4F112 /* goleak_120.png */,
 				CF28B89918F4B13E005C90EE /* login-button.png */,
 				CF28B89718F4B020005C90EE /* goleak.png */,
 			);
@@ -331,6 +334,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "ROBERTO JUNIOR";
 				TargetAttributes = {
+					CF6641B718E3A91400AEE34F = {
+						DevelopmentTeam = A9WYFYN6BA;
+					};
 					CF6641DB18E3A91400AEE34F = {
 						TestTargetID = CF6641B718E3A91400AEE34F;
 					};
@@ -366,6 +372,7 @@
 				CF28B89818F4B020005C90EE /* goleak.png in Resources */,
 				CF29248518FC9B2300C604A7 /* UserCell.xib in Resources */,
 				CF6641CF18E3A91400AEE34F /* Main_iPhone.storyboard in Resources */,
+				CFA92DC818FF761000B4F112 /* goleak_120.png in Resources */,
 				CF6641C618E3A91400AEE34F /* InfoPlist.strings in Resources */,
 				CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */,
 			);
@@ -474,7 +481,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ROBERTO JUNIOR (27F7ZGMHLN)";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer: ROBERTO JUNIOR (27F7ZGMHLN)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -490,10 +498,10 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -514,7 +522,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: ROBERTO JUNIOR (27F7ZGMHLN)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: ROBERTO JUNIOR (27F7ZGMHLN)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -524,9 +533,9 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				SDKROOT = iphoneos;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -534,8 +543,9 @@
 		CF6641EE18E3A91400AEE34F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/viscardo/GoLeak/goleak,
@@ -544,6 +554,7 @@
 				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
 				INFOPLIST_FILE = "goleak/goleak-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -551,8 +562,9 @@
 		CF6641EF18E3A91400AEE34F /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/viscardo/GoLeak/goleak,
@@ -561,6 +573,7 @@
 				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
 				INFOPLIST_FILE = "goleak/goleak-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

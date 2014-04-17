@@ -94,6 +94,24 @@
     NSLog([NSString stringWithFormat:@"Connection failed: %@", [error description]]);
 }
 
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    
+    if ([[segue identifier] isEqualToString:@"segueLeakBackUser"])
+    {
+        UserViewController *UserVC = (UserViewController *)[segue destinationViewController];
+        
+        UserVC.UserChosen = [[UserEntity alloc]init];
+        UserVC.UserChosen.Id = UserChosen.Id;
+        UserVC.UserChosen.PicUrl = UserChosen.PicUrl;
+        UserVC.UserChosen.FirstName = UserChosen.FirstName;
+        UserVC.UserChosen.LastName = UserChosen.LastName;
+        UserVC.UserChosen.FacebookId = UserChosen.FacebookId;
+        
+    }
+    
+}
+
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"connectionDidFinishLoading");
     //NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);

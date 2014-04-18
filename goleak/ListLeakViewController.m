@@ -37,6 +37,8 @@
         self.receivedData = [[NSMutableData alloc] init];
         self.userName.text = _leakChosen.userName;
         self.leakText.text = _leakChosen.leakText;
+        //self.trueButton.titleLabel.text = [NSString stringWithFormat:@"True(%@)", _leakChosen.likes];
+        //self.falseButton.titleLabel.text = [NSString stringWithFormat:@"False(%@)", _leakChosen.likes];
         
         //self.friendsTable.dataSource = self;
         //self.navigationItem.title = leakChosen.userName;

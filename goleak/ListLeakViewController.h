@@ -18,7 +18,7 @@
 @property (strong, nonatomic) IBOutlet UIButton *falseButton;
 @property (strong, nonatomic) IBOutlet UILabel  *userName;
 @property (strong, nonatomic) IBOutlet UILabel  *genderLeak;
-@property (strong, nonatomic) IBOutlet UILabel *leakText;
+@property (strong, nonatomic) IBOutlet UITextView *leakText;
 @property (strong, nonatomic) IBOutlet UIImageView *userImage;
 
 @end

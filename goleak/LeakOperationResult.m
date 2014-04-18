@@ -33,7 +33,7 @@
            
             
             NSString *fb = [[item objectForKey:@"UserLeaked"] objectForKey:@"Fb"];
-            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", fb];
+            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", fb];
             
           
             
@@ -79,7 +79,7 @@
                 
                 
                 NSString *fb = [item objectForKey:@"Fb"];
-                NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", fb];
+                NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", fb];
                 
                 
                 
@@ -129,7 +129,7 @@
                 d.LastName = [res objectForKey:@"LastName"];
                 d.FacebookId = [res objectForKey:@"Fb"];
                 NSString *fbuid = d.FacebookId;
-                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture", fbuid]];
+                NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", fbuid]];
                 
                 d.PicUrl= url.path;
                 //[ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture", d.FacebookId];

@@ -118,7 +118,7 @@
     
     leakChosen = [self.leaksArray objectAtIndex:indexPath.row];
     
-    [self performSegueWithIdentifier:@"segueUserLeak" sender:self ];
+    [self performSegueWithIdentifier:@"segueUserToLeak" sender:self ];
     
 }
 
@@ -126,7 +126,7 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     
-    if ([[segue identifier] isEqualToString:@"segueUserLeak"])
+    if ([[segue identifier] isEqualToString:@"segueUserToLeak"])
     {
         ListLeakViewController *UserVC = (ListLeakViewController *)[segue destinationViewController];
         

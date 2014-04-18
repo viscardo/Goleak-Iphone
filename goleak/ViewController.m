@@ -10,6 +10,7 @@
 #import "LeakService.h"
 #import "LeakOperationResult.h"
 #import "AppDelegate.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface ViewController ()
 
@@ -127,6 +128,7 @@
     LeakCell *cell = nil;
     
     cell = (LeakCell *)[self.friendsTable dequeueReusableCellWithIdentifier:simpleTableIdentifier];
+    
     
     LeakEntity *leak = [self.leaksArray objectAtIndex:[indexPath row]];
     

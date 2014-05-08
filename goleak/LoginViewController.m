@@ -103,13 +103,13 @@
     
     appDelegate.userEntity = opr.userEntity;
     
-    //UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-UITabBarController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
+   
+    
+    UITabBarController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
     [self presentViewController:monitorMenuViewController animated:NO completion:nil];
     
     
-    //UITabBarController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
-    //[(UINavigationController*)appDelegate.window.rootViewController pushViewController:ivc animated:NO  ];
+
     
 }
 

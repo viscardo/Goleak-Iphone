@@ -10,6 +10,8 @@
 		CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
 		CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */; };
 		CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */; };
+		CF1F92A719018830001C9B30 /* ajax-loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = CF1F92A619018830001C9B30 /* ajax-loader.gif */; };
+		CF1F92AA190188B5001C9B30 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1F92A9190188B5001C9B30 /* LoadingViewController.m */; };
 		CF24ED6518E4E5940024C696 /* LeakCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6418E4E5940024C696 /* LeakCell.m */; };
 		CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF24ED6618E4E6DB0024C696 /* LeakCell.xib */; };
 		CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6918E4F1980024C696 /* LeakEntity.m */; };
@@ -56,6 +58,9 @@
 		CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
 		CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
+		CF1F92A619018830001C9B30 /* ajax-loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader.gif"; sourceTree = "<group>"; };
+		CF1F92A8190188B5001C9B30 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
+		CF1F92A9190188B5001C9B30 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
 		CF24ED6318E4E5940024C696 /* LeakCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakCell.h; sourceTree = "<group>"; };
 		CF24ED6418E4E5940024C696 /* LeakCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakCell.m; sourceTree = "<group>"; };
 		CF24ED6618E4E6DB0024C696 /* LeakCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LeakCell.xib; sourceTree = "<group>"; };
@@ -158,6 +163,8 @@
 				CF28B89418F4AD98005C90EE /* LoginViewController.m */,
 				CF29248618FC9F1B00C604A7 /* ListLeakViewController.h */,
 				CF29248718FC9F1B00C604A7 /* ListLeakViewController.m */,
+				CF1F92A8190188B5001C9B30 /* LoadingViewController.h */,
+				CF1F92A9190188B5001C9B30 /* LoadingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -178,6 +185,7 @@
 		CF28B89618F4B007005C90EE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CF1F92A619018830001C9B30 /* ajax-loader.gif */,
 				CFA92DC718FF761000B4F112 /* goleak_120.png */,
 				CF28B89918F4B13E005C90EE /* login-button.png */,
 				CF28B89718F4B020005C90EE /* goleak.png */,
@@ -367,6 +375,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6641D218E3A91400AEE34F /* Main_iPad.storyboard in Resources */,
+				CF1F92A719018830001C9B30 /* ajax-loader.gif in Resources */,
 				CF28B89A18F4B13E005C90EE /* login-button.png in Resources */,
 				CF6641D718E3A91400AEE34F /* Images.xcassets in Resources */,
 				CF28B89818F4B020005C90EE /* goleak.png in Resources */,
@@ -400,6 +409,7 @@
 				CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */,
 				CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */,
 				CF24ED6518E4E5940024C696 /* LeakCell.m in Sources */,
+				CF1F92AA190188B5001C9B30 /* LoadingViewController.m in Sources */,
 				CF26877418E8B3D40003A7DC /* UserViewController.m in Sources */,
 				CF24ED6A18E4F1980024C696 /* LeakEntity.m in Sources */,
 				CF6641C818E3A91400AEE34F /* main.m in Sources */,

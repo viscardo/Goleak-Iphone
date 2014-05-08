@@ -151,6 +151,7 @@
     
     NSArray* foo = [leak.timeLeaked componentsSeparatedByString: @"T"];
     cell.timeLeaked.text = [foo[0] stringByReplacingOccurrencesOfString:@"-" withString:@"/"];
+    cell.hourLeaked.text = [foo[1] stringByReplacingOccurrencesOfString:@"-" withString:@":"];
     cell.genderLeak.text = leak.genderLeak;
     
     cell.trueOpinion.text = [ NSString stringWithFormat:@"%@ True", leak.likes];

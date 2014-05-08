@@ -10,7 +10,7 @@
 
 @implementation LeakCell
 
-@synthesize UserLeakedImage, genderLeak, leakText, timeLeaked, UserName;
+@synthesize UserLeakedImage, genderLeak, leakText, timeLeaked, UserName, hourLeaked;
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {

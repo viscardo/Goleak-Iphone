@@ -10,6 +10,9 @@
 		CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
 		CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */; };
 		CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */; };
+		CF1D25C0191B18F800753B60 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1D25BF191B18F800753B60 /* like.png */; };
+		CF1D25C2191B18FF00753B60 /* unlike2.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1D25C1191B18FF00753B60 /* unlike2.png */; };
+		CF1D25C4191B20C900753B60 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF1D25C3191B20C900753B60 /* iAd.framework */; };
 		CF1F92A719018830001C9B30 /* ajax-loader.gif in Resources */ = {isa = PBXBuildFile; fileRef = CF1F92A619018830001C9B30 /* ajax-loader.gif */; };
 		CF1F92AA190188B5001C9B30 /* LoadingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF1F92A9190188B5001C9B30 /* LoadingViewController.m */; };
 		CF24ED6518E4E5940024C696 /* LeakCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF24ED6418E4E5940024C696 /* LeakCell.m */; };
@@ -58,6 +61,9 @@
 		CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
 		CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeakViewController.m; sourceTree = "<group>"; };
+		CF1D25BF191B18F800753B60 /* like.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = like.png; sourceTree = "<group>"; };
+		CF1D25C1191B18FF00753B60 /* unlike2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = unlike2.png; sourceTree = "<group>"; };
+		CF1D25C3191B20C900753B60 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		CF1F92A619018830001C9B30 /* ajax-loader.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "ajax-loader.gif"; sourceTree = "<group>"; };
 		CF1F92A8190188B5001C9B30 /* LoadingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadingViewController.h; sourceTree = "<group>"; };
 		CF1F92A9190188B5001C9B30 /* LoadingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadingViewController.m; sourceTree = "<group>"; };
@@ -117,6 +123,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CF1D25C4191B20C900753B60 /* iAd.framework in Frameworks */,
 				CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */,
 				CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */,
 				CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */,
@@ -185,6 +192,8 @@
 		CF28B89618F4B007005C90EE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CF1D25C1191B18FF00753B60 /* unlike2.png */,
+				CF1D25BF191B18F800753B60 /* like.png */,
 				CF1F92A619018830001C9B30 /* ajax-loader.gif */,
 				CFA92DC718FF761000B4F112 /* goleak_120.png */,
 				CF28B89918F4B13E005C90EE /* login-button.png */,
@@ -215,6 +224,7 @@
 		CF6641BA18E3A91400AEE34F /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CF1D25C3191B20C900753B60 /* iAd.framework */,
 				CF28B8A318F4BAB2005C90EE /* AdSupport.framework */,
 				CF28B8A118F4BA74005C90EE /* Accounts.framework */,
 				CF28B89F18F4B9B0005C90EE /* Social.framework */,
@@ -378,12 +388,14 @@
 				CF1F92A719018830001C9B30 /* ajax-loader.gif in Resources */,
 				CF28B89A18F4B13E005C90EE /* login-button.png in Resources */,
 				CF6641D718E3A91400AEE34F /* Images.xcassets in Resources */,
+				CF1D25C2191B18FF00753B60 /* unlike2.png in Resources */,
 				CF28B89818F4B020005C90EE /* goleak.png in Resources */,
 				CF29248518FC9B2300C604A7 /* UserCell.xib in Resources */,
 				CF6641CF18E3A91400AEE34F /* Main_iPhone.storyboard in Resources */,
 				CFA92DC818FF761000B4F112 /* goleak_120.png in Resources */,
 				CF6641C618E3A91400AEE34F /* InfoPlist.strings in Resources */,
 				CF24ED6718E4E6DB0024C696 /* LeakCell.xib in Resources */,
+				CF1D25C0191B18F800753B60 /* like.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

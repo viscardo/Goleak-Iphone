@@ -33,7 +33,7 @@
            
             
             NSString *fb = [[item objectForKey:@"UserLeaked"] objectForKey:@"Fb"];
-            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", fb];
+            NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", fb];
             
           
             
@@ -79,7 +79,7 @@
                 
                 
                 NSString *fb = [item objectForKey:@"Fb"];
-                NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=large", fb];
+                NSString *avatar = [ NSString stringWithFormat:@"http://graph.facebook.com/%@/picture?type=normal", fb];
                 
                 
                 

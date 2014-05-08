@@ -10,8 +10,9 @@
 #import "LeakCell.h"
 #import "LeakEntity.h"
 #import "ListLeakViewController.h"
+#import <iAd/iAd.h>
 
-@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface ViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, ADBannerViewDelegate>
 @property (nonatomic, retain) IBOutlet UITableView *friendsTable;
 @property (nonatomic, retain) NSMutableArray *leaksArray;
 @property (nonatomic, retain) LeakEntity *leakChosen;

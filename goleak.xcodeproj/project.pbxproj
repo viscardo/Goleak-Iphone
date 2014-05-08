@@ -26,6 +26,7 @@
 		CF29248318FC9B0A00C604A7 /* UserCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CF29248218FC9B0A00C604A7 /* UserCell.m */; };
 		CF29248518FC9B2300C604A7 /* UserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CF29248418FC9B2300C604A7 /* UserCell.xib */; };
 		CF29248818FC9F1B00C604A7 /* ListLeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF29248718FC9F1B00C604A7 /* ListLeakViewController.m */; };
+		CF2AA9CE191C37BF00FD52BD /* goleak_branco.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CF2AA9CD191C37BF00FD52BD /* goleak_branco.jpg */; };
 		CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BB18E3A91400AEE34F /* Foundation.framework */; };
 		CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */; };
 		CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF6641BF18E3A91400AEE34F /* UIKit.framework */; };
@@ -91,6 +92,7 @@
 		CF29248418FC9B2300C604A7 /* UserCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserCell.xib; sourceTree = "<group>"; };
 		CF29248618FC9F1B00C604A7 /* ListLeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListLeakViewController.h; sourceTree = "<group>"; };
 		CF29248718FC9F1B00C604A7 /* ListLeakViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListLeakViewController.m; sourceTree = "<group>"; };
+		CF2AA9CD191C37BF00FD52BD /* goleak_branco.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = goleak_branco.jpg; sourceTree = "<group>"; };
 		CF6641B818E3A91400AEE34F /* goleak.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = goleak.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF6641BB18E3A91400AEE34F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CF6641BD18E3A91400AEE34F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -192,6 +194,7 @@
 		CF28B89618F4B007005C90EE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CF2AA9CD191C37BF00FD52BD /* goleak_branco.jpg */,
 				CF1D25C1191B18FF00753B60 /* unlike2.png */,
 				CF1D25BF191B18F800753B60 /* like.png */,
 				CF1F92A619018830001C9B30 /* ajax-loader.gif */,
@@ -385,6 +388,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF6641D218E3A91400AEE34F /* Main_iPad.storyboard in Resources */,
+				CF2AA9CE191C37BF00FD52BD /* goleak_branco.jpg in Resources */,
 				CF1F92A719018830001C9B30 /* ajax-loader.gif in Resources */,
 				CF28B89A18F4B13E005C90EE /* login-button.png in Resources */,
 				CF6641D718E3A91400AEE34F /* Images.xcassets in Resources */,
@@ -567,6 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=*]" = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",

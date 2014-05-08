@@ -43,16 +43,16 @@
         
         self.trueButton.layer.borderWidth = 1.0f;
         self.trueButton.layer.cornerRadius = 5.0f ;
-        self.trueButton.layer.borderColor = [[UIColor blackColor]CGColor];
+        self.trueButton.layer.borderColor = [[UIColor whiteColor]CGColor];
         
         self.falseButton.layer.borderWidth = 1.0f;
         self.falseButton.layer.cornerRadius = 5.0f ;
-        self.falseButton.layer.borderColor = [[UIColor blackColor]CGColor];
+        self.falseButton.layer.borderColor = [[UIColor whiteColor]CGColor];
         
-        self.userImage.layer.borderWidth = 1.0f;
+        self.userImage.layer.borderWidth = 2.0f;
         self.userImage.layer.cornerRadius = self.userImage.frame.size.width/2;
         self.userImage.clipsToBounds = YES;
-        self.userImage.layer.borderColor = [[UIColor blackColor]CGColor];
+        self.userImage.layer.borderColor = [[UIColor whiteColor]CGColor];
         
         
         //self.friendsTable.dataSource = self;

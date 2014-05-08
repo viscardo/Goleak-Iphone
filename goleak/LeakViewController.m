@@ -42,10 +42,10 @@
     self.ButtonLeak.layer.cornerRadius = 5.0f ;
     self.ButtonLeak.layer.borderColor = [[UIColor blackColor]CGColor];
     
-    self.UserImage.layer.borderWidth = 1.0f;
+    self.UserImage.layer.borderWidth = 2.0f;
     self.UserImage.layer.cornerRadius = self.UserImage.frame.size.width/2;
     self.UserImage.clipsToBounds = YES;
-    self.UserImage.layer.borderColor = [[UIColor blackColor]CGColor];
+    self.UserImage.layer.borderColor = [[UIColor whiteColor]CGColor];
     
     if(self.UserChosen) {
         self.receivedData = [[NSMutableData alloc] init];

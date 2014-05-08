@@ -32,6 +32,15 @@
 {
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     
+    self.loginButton.layer.borderWidth = 1.0f;
+    self.loginButton.layer.cornerRadius = 5.0f ;
+    self.loginButton.layer.borderColor = [[UIColor blackColor]CGColor];
+    
+    self.logoImage.layer.borderWidth = 1.0f;
+    self.logoImage.layer.cornerRadius = 10.0f;
+    self.logoImage.clipsToBounds = YES;
+    self.logoImage.layer.borderColor = [[UIColor blackColor]CGColor];
+    
     if(appDelegate.facebookId != nil && appDelegate.authToken != nil)
     {
             self.receivedData = [[NSMutableData alloc] init];
@@ -112,6 +121,8 @@
 
     
 }
+
+
 
 
 

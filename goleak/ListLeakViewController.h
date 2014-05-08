@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "LeakEntity.h"
+#import <iAd/iAd.h>
 
-@interface ListLeakViewController : UIViewController
+@interface ListLeakViewController : UIViewController<ADBannerViewDelegate>
 
 
 @property (nonatomic, strong) LeakEntity *leakChosen;

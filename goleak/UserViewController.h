@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "UserEntity.h"
 #import "LeakEntity.h"
+#import <iAd/iAd.h>
 
-@interface UserViewController : UIViewController
+@interface UserViewController : UIViewController<ADBannerViewDelegate>
 
 @property (nonatomic, strong) UserEntity *UserChosen;
 @property (nonatomic, strong) LeakEntity *leakChosen;

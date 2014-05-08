@@ -9,8 +9,9 @@
 #import <UIKit/UIKit.h>
 #import "UserViewController.h"
 #import "UserEntity.h"
+#import <iAd/iAd.h>
 
-@interface FriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource>
+@interface FriendsViewController : UIViewController<UITableViewDelegate, UITableViewDataSource, ADBannerViewDelegate>
 
 @property (nonatomic, retain) IBOutlet UITableView *friendsTable;
 @property (nonatomic, retain) NSMutableArray *leaksArray;

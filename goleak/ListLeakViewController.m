@@ -39,6 +39,21 @@
         self.leakText.text = _leakChosen.leakText;
         //self.trueButton.titleLabel.text = [NSString stringWithFormat:@"True(%@)", _leakChosen.likes];
         //self.falseButton.titleLabel.text = [NSString stringWithFormat:@"False(%@)", _leakChosen.likes];
+
+        
+        self.trueButton.layer.borderWidth = 1.0f;
+        self.trueButton.layer.cornerRadius = 5.0f ;
+        self.trueButton.layer.borderColor = [[UIColor blackColor]CGColor];
+        
+        self.falseButton.layer.borderWidth = 1.0f;
+        self.falseButton.layer.cornerRadius = 5.0f ;
+        self.falseButton.layer.borderColor = [[UIColor blackColor]CGColor];
+        
+        self.userImage.layer.borderWidth = 1.0f;
+        self.userImage.layer.cornerRadius = self.userImage.frame.size.width/2;
+        self.userImage.clipsToBounds = YES;
+        self.userImage.layer.borderColor = [[UIColor blackColor]CGColor];
+        
         
         //self.friendsTable.dataSource = self;
         //self.navigationItem.title = leakChosen.userName;
@@ -136,6 +151,23 @@
 }
 
 
+#pragma mark iAd Delegate Methods
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
+}
 
 
 

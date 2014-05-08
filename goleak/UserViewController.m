@@ -37,6 +37,15 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.leakButton.layer.borderWidth = 1.0f;
+    self.leakButton.layer.cornerRadius = 5.0f ;
+    self.leakButton.layer.borderColor = [[UIColor blackColor]CGColor];
+    
+    self.UserImage.layer.borderWidth = 1.0f;
+    self.UserImage.layer.cornerRadius = self.UserImage.frame.size.width/2;
+    self.UserImage.clipsToBounds = YES;
+    self.UserImage.layer.borderColor = [[UIColor blackColor]CGColor];
 
     if(self.UserChosen) {
             self.receivedData = [[NSMutableData alloc] init];
@@ -201,6 +210,10 @@
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             cell.UserLeakedImage.image = img;
+            cell.UserLeakedImage.layer.borderWidth = 1.0f;
+            cell.UserLeakedImage.layer.cornerRadius = cell.UserLeakedImage.frame.size.width/2;
+            cell.UserLeakedImage.clipsToBounds = YES;
+            cell.UserLeakedImage.layer.borderColor = [[UIColor blackColor]CGColor];
             //[cell.loading stopAnimating];
         });
     });
@@ -219,6 +232,23 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark iAd Delegate Methods
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
+}
 
 
 

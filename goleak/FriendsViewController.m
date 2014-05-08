@@ -152,6 +152,10 @@
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             cell.UserLeakedImage.image = img;
+            cell.UserLeakedImage.layer.borderWidth = 1.0f;
+            cell.UserLeakedImage.layer.cornerRadius = cell.UserLeakedImage.frame.size.width/2;
+            cell.UserLeakedImage.clipsToBounds = YES;
+            cell.UserLeakedImage.layer.borderColor = [[UIColor blackColor]CGColor];
             //[cell.loading stopAnimating];
         });
     });
@@ -165,6 +169,25 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark iAd Delegate Methods
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
+}
+
 
 
 @end

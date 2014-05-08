@@ -37,6 +37,16 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
+    
+    self.ButtonLeak.layer.borderWidth = 1.0f;
+    self.ButtonLeak.layer.cornerRadius = 5.0f ;
+    self.ButtonLeak.layer.borderColor = [[UIColor blackColor]CGColor];
+    
+    self.UserImage.layer.borderWidth = 1.0f;
+    self.UserImage.layer.cornerRadius = self.UserImage.frame.size.width/2;
+    self.UserImage.clipsToBounds = YES;
+    self.UserImage.layer.borderColor = [[UIColor blackColor]CGColor];
+    
     if(self.UserChosen) {
         self.receivedData = [[NSMutableData alloc] init];
 
@@ -146,4 +156,24 @@
 - (IBAction)textFieldDismiss:(id)sender {
     [_LeakText resignFirstResponder ];
 }
+
+
+#pragma mark iAd Delegate Methods
+
+-(void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:1];
+    [UIView commitAnimations];
+}
+
+-(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    [UIView beginAnimations:nil context:nil];
+    [UIView setAnimationDuration:1];
+    [banner setAlpha:0];
+    [UIView commitAnimations];
+}
+
 @end

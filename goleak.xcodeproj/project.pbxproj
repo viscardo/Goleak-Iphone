@@ -158,10 +158,10 @@
 		CF0DD62018EA24BF00418EA4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				CF26877318E8B3D40003A7DC /* UserViewController.m */,
 				CF26877218E8B3D40003A7DC /* UserViewController.h */,
-				CF6641D418E3A91400AEE34F /* ViewController.m */,
+				CF26877318E8B3D40003A7DC /* UserViewController.m */,
 				CF6641D318E3A91400AEE34F /* ViewController.h */,
+				CF6641D418E3A91400AEE34F /* ViewController.m */,
 				CF0DD62218EA4D2D00418EA4 /* FriendsViewController.h */,
 				CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */,
 				CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */,

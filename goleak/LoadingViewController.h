@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <iAd/iAd.h>
 
-@interface LoadingViewController : UIViewController
+@interface LoadingViewController : UIViewController<ADBannerViewDelegate>
 
 @end

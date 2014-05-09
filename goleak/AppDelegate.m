@@ -32,23 +32,53 @@
     //self.window.backgroundColor = [UIColor whiteColor];
     //[self.window makeKeyAndVisible];
     
+    /*
     // Whenever a person opens the app, check for a cached session
     if (FBSession.activeSession.state == FBSessionStateCreatedTokenLoaded) {
         NSLog(@"Found a cached session");
         // If there's one, just open the session silently, without showing the user the login UI
-        [FBSession openActiveSessionWithReadPermissions:@[@"basic_info, email, public_profile, user_friends"]
-                                           allowLoginUI:NO
+        [FBSession openActiveSessionWithAllowLoginUI:YES];
+        [FBSession openActiveSessionWithReadPermissions:@[@"basic_info", @"public_profile", @"user_friends", @"email"]
+                                           allowLoginUI:YES
                                       completionHandler:^(FBSession *session, FBSessionState state, NSError *error) {
                                           // Handler for session state changes
                                           // This method will be called EACH time the session state changes,
                                           // also for intermediate states and NOT just when the session open
                                           [self sessionStateChanged:session state:state error:error];
                                       }];
+
         
         // If there's no cached session, we will show a login button
     } else {
         UIButton *loginButton = [self.customLoginViewController loginButton];
         [loginButton setTitle:@"Log in with Facebook" forState:UIControlStateNormal];
+    }
+     */
+    
+    // If the session state is any of the two "open" states when the button is clicked
+    if (FBSession.activeSession.state == FBSessionStateOpen
+        || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
+        
+        // Close the session and remove the access token from the cache
+        // The session state handler (in the app delegate) will be called automatically
+        [FBSession.activeSession closeAndClearTokenInformation];
+        
+        // If the session state is not any of the two "open" states when the button is clicked
+    } else {
+        // Open a session showing the user the login UI
+        // You must ALWAYS ask for basic_info permissions when opening a session
+        [FBSession openActiveSessionWithReadPermissions:@[ @"user_friends", @"email", @"basic_info", @"public_profile"]
+                                           allowLoginUI:NO
+                                      completionHandler:
+         ^(FBSession *session, FBSessionState state, NSError *error) {
+             
+             // Retrieve the app delegate
+             AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+             // Call the app delegate's sessionStateChanged:state:error method to handle session state changes
+             [appDelegate sessionStateChanged:session state:state error:error];
+         }];
+        
+        
     }
     
     return YES;

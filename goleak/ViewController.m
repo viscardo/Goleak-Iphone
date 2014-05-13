@@ -27,7 +27,8 @@
 {
     [super viewDidLoad];
     
-    //[self.loading startAnimating];
+
+    
     self.receivedData = [[NSMutableData alloc] init];
     self.friendsTable.dataSource = self;
     
@@ -82,7 +83,8 @@
     NSLog(@"connectionDidFinishLoading");
     //NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
     
-    //[self.loading stopAnimating];
+    [self.loading stopAnimating];
+    self.loading.hidesWhenStopped = TRUE;
     
     LeakOperationResult * opr = [[LeakOperationResult alloc]initWithLeakFeed:self.receivedData];
     

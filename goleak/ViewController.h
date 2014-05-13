@@ -17,4 +17,6 @@
 @property (nonatomic, retain) NSMutableArray *leaksArray;
 @property (nonatomic, retain) LeakEntity *leakChosen;
 @property (retain, nonatomic) NSString *UserFbId;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
+
 @end

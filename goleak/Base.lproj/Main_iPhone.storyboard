@@ -9,13 +9,17 @@
             <objects>
                 <viewController storyboardIdentifier="leakFeedId" id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="cwt-t6-33T"/>
-                        <viewControllerLayoutGuide type="bottom" id="Hj2-b6-4S9"/>
+                        <viewControllerLayoutGuide type="top" id="gZY-UU-v5P"/>
+                        <viewControllerLayoutGuide type="bottom" id="Z5D-ao-MUU"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="6fy-qE-vOp">
+                                <rect key="frame" x="0.0" y="274" width="320" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="110" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="tiy-Vc-hZS">
                                 <rect key="frame" x="0.0" y="43" width="320" height="407"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -38,6 +42,7 @@
                     <navigationItem key="navigationItem" title="Leak Feed" id="jS6-kp-2Jp"/>
                     <connections>
                         <outlet property="friendsTable" destination="tiy-Vc-hZS" id="u7R-H9-spz"/>
+                        <outlet property="loading" destination="6fy-qE-vOp" id="VSs-SK-qe2"/>
                         <segue destination="NRt-cA-OtW" kind="push" identifier="segueLeak" id="2c0-0v-gLa"/>
                     </connections>
                 </viewController>
@@ -50,8 +55,8 @@
             <objects>
                 <viewController id="NRt-cA-OtW" customClass="ListLeakViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="WxD-I7-eDF"/>
-                        <viewControllerLayoutGuide type="bottom" id="VaZ-Fh-YvJ"/>
+                        <viewControllerLayoutGuide type="top" id="zCu-b8-I9t"/>
+                        <viewControllerLayoutGuide type="bottom" id="oUg-3Q-yYG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="i1N-Rf-DqU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -93,6 +98,10 @@
                                     <outlet property="delegate" destination="NRt-cA-OtW" id="vhE-cB-POx"/>
                                 </connections>
                             </adBannerView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aRk-gV-o9A">
+                                <rect key="frame" x="150" y="274" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ONB-VD-P7A">
                                 <rect key="frame" x="-5" y="112" width="325" height="68"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -127,6 +136,7 @@
                         <outlet property="falseButton" destination="aqW-tw-zkY" id="uEG-HV-RJV"/>
                         <outlet property="genderLeak" destination="W9b-54-ukX" id="S6e-oi-Gsp"/>
                         <outlet property="leakText" destination="4md-g2-gds" id="4ks-5B-yLb"/>
+                        <outlet property="loading" destination="aRk-gV-o9A" id="1Dz-33-fWc"/>
                         <outlet property="trueButton" destination="Cmb-fV-UfW" id="Wi8-wp-P1g"/>
                         <outlet property="userImage" destination="AJY-mn-8v2" id="TGz-3f-iO4"/>
                         <outlet property="userName" destination="zRM-K6-b5H" id="jmv-tj-sMS"/>
@@ -142,8 +152,8 @@
             <objects>
                 <viewController id="fMd-Af-fkN" customClass="FriendsViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="5Ye-f6-C8T"/>
-                        <viewControllerLayoutGuide type="bottom" id="Gkw-X7-RAx"/>
+                        <viewControllerLayoutGuide type="top" id="QbX-BI-zRK"/>
+                        <viewControllerLayoutGuide type="bottom" id="jgO-Sz-rZT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Vus-Pb-mIZ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="519"/>
@@ -190,8 +200,8 @@
             <objects>
                 <viewController id="RUw-Nm-Fe7" customClass="UserViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="acw-du-RiN"/>
-                        <viewControllerLayoutGuide type="bottom" id="mhc-TU-MNQ"/>
+                        <viewControllerLayoutGuide type="top" id="VUu-CA-2Yg"/>
+                        <viewControllerLayoutGuide type="bottom" id="lp9-Bo-FuL"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="c7k-3c-dYe">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -268,8 +278,8 @@
             <objects>
                 <viewController id="Q4h-Pu-cCc" customClass="LeakViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yQy-zf-u6x"/>
-                        <viewControllerLayoutGuide type="bottom" id="rY1-u3-RPa"/>
+                        <viewControllerLayoutGuide type="top" id="W9O-f5-oIu"/>
+                        <viewControllerLayoutGuide type="bottom" id="QQt-HU-VsH"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="5mk-ZS-6sU">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -373,8 +383,8 @@
             <objects>
                 <viewController storyboardIdentifier="LoginViewId" id="ejm-DC-dU0" customClass="LoginViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xm6-O8-Xic"/>
-                        <viewControllerLayoutGuide type="bottom" id="r1G-YF-69J"/>
+                        <viewControllerLayoutGuide type="top" id="3RA-tB-s6v"/>
+                        <viewControllerLayoutGuide type="bottom" id="DOU-Dc-lUn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Mif-Me-pQK">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
@@ -442,14 +452,14 @@
             <objects>
                 <viewController id="qn5-yf-F2U" customClass="LoadingViewController" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="6Vw-DM-DNA"/>
-                        <viewControllerLayoutGuide type="bottom" id="P3i-hP-Kq3"/>
+                        <viewControllerLayoutGuide type="top" id="TcX-Tm-jhJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EIt-GU-7Le"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="FEw-5E-kuL">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="96284268-EC9E-4E98-A485-B5D372A66050" translatesAutoresizingMaskIntoConstraints="NO" id="D5E-2U-sIM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="354E84E4-51B6-48BD-B83A-03A1FC2C786C" translatesAutoresizingMaskIntoConstraints="NO" id="D5E-2U-sIM">
                                 <rect key="frame" x="89" y="115" width="142" height="123"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
@@ -534,7 +544,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="96284268-EC9E-4E98-A485-B5D372A66050" width="16" height="16">
+        <image name="354E84E4-51B6-48BD-B83A-03A1FC2C786C" width="16" height="16">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGOzxYJHZlcnNpb25YJG9iamVjdHNZJGFyY2hpdmVyVCR0b3ASAAGGoK0HCBEW
 GxwgISksLzU4VSRudWxs1AkKCwwNDg8QViRjbGFzc1xOU0ltYWdlRmxhZ3NWTlNSZXBzV05TQ29sb3KA
@@ -632,7 +642,7 @@ AAAAAAAAAgEAAAAAAAAAPwAAAAAAAAAAAAAAAAAAEro
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="W4K-5t-gGL"/>
-        <segue reference="x7z-K8-GXJ"/>
         <segue reference="t5C-eF-jzv"/>
+        <segue reference="2c0-0v-gLa"/>
     </inferredMetricsTieBreakers>
 </document>

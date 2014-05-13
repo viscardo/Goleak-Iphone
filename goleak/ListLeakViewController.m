@@ -32,6 +32,7 @@
     
     
 	// Do any additional setup after loading the view.
+        self.loading.hidesWhenStopped = TRUE;
     
     if(self.leakChosen) {
         self.receivedData = [[NSMutableData alloc] init];
@@ -80,7 +81,7 @@
 
 - (void)displayImage:(UIImage *)image {
     [self.userImage  setImage:image];
-    //[loading stopAnimating];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -90,13 +91,15 @@
 }
 
 - (IBAction)buttonFalseTouched:(id)sender {
-        self.receivedData = [[NSMutableData alloc] init];
+    [self.loading startAnimating];
+    self.receivedData = [[NSMutableData alloc] init];
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     [[LeakService new] GetDislike :self.leakChosen.codigo :appDelegate.userEntity.Id :self  ];
 }
 
 - (IBAction)buttonTrueTouched:(id)sender {
-            self.receivedData = [[NSMutableData alloc] init];
+    [self.loading startAnimating];
+    self.receivedData = [[NSMutableData alloc] init];
     
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     [[LeakService new] GetLike :self.leakChosen.codigo :appDelegate.userEntity.Id :self  ];
@@ -123,7 +126,9 @@
     NSLog(@"connectionDidFinishLoading");
     //NSLog(@"Succeeded! Received %d bytes of data",[self.responseData length]);
     
-    //[self.loading stopAnimating];
+    [self.loading stopAnimating];
+    self.loading.hidesWhenStopped = TRUE;
+
     
     LeakOperationResult * opr = [[LeakOperationResult alloc]initWithBoolResult :self.receivedData];
     

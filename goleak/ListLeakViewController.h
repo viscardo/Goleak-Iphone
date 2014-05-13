@@ -21,5 +21,6 @@
 @property (strong, nonatomic) IBOutlet UILabel  *genderLeak;
 @property (strong, nonatomic) IBOutlet UITextView *leakText;
 @property (strong, nonatomic) IBOutlet UIImageView *userImage;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 @end

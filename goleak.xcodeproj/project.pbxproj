@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
+		CF0D35BA19258700001EBF13 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0D35B919258700001EBF13 /* ConfigurationViewController.m */; };
 		CF0DD62418EA4D2D00418EA4 /* FriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */; };
 		CF0DD62718EA4FAC00418EA4 /* LeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0DD62618EA4FAC00418EA4 /* LeakViewController.m */; };
 		CF1D25C0191B18F800753B60 /* like.png in Resources */ = {isa = PBXBuildFile; fileRef = CF1D25BF191B18F800753B60 /* like.png */; };
@@ -58,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CF0D35B819258700001EBF13 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
+		CF0D35B919258700001EBF13 /* ConfigurationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ConfigurationViewController.m; sourceTree = "<group>"; };
 		CF0DD62218EA4D2D00418EA4 /* FriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FriendsViewController.h; sourceTree = "<group>"; };
 		CF0DD62318EA4D2D00418EA4 /* FriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FriendsViewController.m; sourceTree = "<group>"; };
 		CF0DD62518EA4FAC00418EA4 /* LeakViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeakViewController.h; sourceTree = "<group>"; };
@@ -174,6 +177,8 @@
 				CF29248718FC9F1B00C604A7 /* ListLeakViewController.m */,
 				CF1F92A8190188B5001C9B30 /* LoadingViewController.h */,
 				CF1F92A9190188B5001C9B30 /* LoadingViewController.m */,
+				CF0D35B819258700001EBF13 /* ConfigurationViewController.h */,
+				CF0D35B919258700001EBF13 /* ConfigurationViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -433,6 +438,7 @@
 				CF29248818FC9F1B00C604A7 /* ListLeakViewController.m in Sources */,
 				CF8D00DD18EB842700E52CCC /* LeakOperationResult.m in Sources */,
 				CF29248318FC9B0A00C604A7 /* UserCell.m in Sources */,
+				CF0D35BA19258700001EBF13 /* ConfigurationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

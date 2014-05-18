@@ -151,6 +151,7 @@
     
     // Confirm logout message
     [self showMessage:@"You're now logged out" withTitle:@""];
+    [FBSession.activeSession closeAndClearTokenInformation];
 }
 
 // Show the user the logged-in UI

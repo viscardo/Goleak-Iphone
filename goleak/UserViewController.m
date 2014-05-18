@@ -160,7 +160,9 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"leakCell";
+    //static NSString *simpleTableIdentifier = @"leakCell";
+    
+    NSString *simpleTableIdentifier = [NSString stringWithFormat:@"%@%i",@"leakCell",indexPath.row];
     LeakCell *cell = nil;
     
     cell = (LeakCell *)[self.friendsTable dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -197,7 +199,7 @@
     //NSData *data = [NSData dataWithContentsOfURL:url];
     //UIImage *img = [[UIImage alloc] initWithData:data];
     
-    //cell.UserLeakedImage.image  = img;
+    cell.UserLeakedImage.image  = nil;
     
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     
@@ -210,10 +212,10 @@
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             cell.UserLeakedImage.image = img;
-            cell.UserLeakedImage.layer.borderWidth = 1.0f;
+            cell.UserLeakedImage.layer.borderWidth = 2.0f;
             cell.UserLeakedImage.layer.cornerRadius = cell.UserLeakedImage.frame.size.width/2;
             cell.UserLeakedImage.clipsToBounds = YES;
-            cell.UserLeakedImage.layer.borderColor = [[UIColor blackColor]CGColor];
+            cell.UserLeakedImage.layer.borderColor = [[UIColor whiteColor]CGColor];
             //[cell.loading stopAnimating];
         });
     });

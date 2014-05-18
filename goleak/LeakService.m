@@ -65,6 +65,39 @@
     [NSURLConnection connectionWithRequest:request delegate:delegate];
 }
 
+-(void) UpdateFriends :(NSString*)Id :(NSString*)accesstoken :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/UpdateFriends?Id=%@&accesstoken=%@", Id, accesstoken];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
+
+-(void) RemoveProfile :(NSString*)Id :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/RemoveProfile?id=%@", Id];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"GET"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
 -(void) GetLoginByFacebook :(NSString*)fbId :(NSString*)accesstoken :(id)delegate
 {
     

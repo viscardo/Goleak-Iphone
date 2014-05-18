@@ -89,6 +89,7 @@
 
                 d.FirstName = [item objectForKey:@"FirstName"];
                 d.LastName = [item objectForKey:@"LastName"];
+                d.LeaksCount = [item objectForKey:@"LeaksCount"];
                 
                 d.FacebookId = [item objectForKey:@"Fb"] ;
                 d.PicUrl = avatar; ;

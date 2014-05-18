@@ -115,7 +115,8 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *simpleTableIdentifier = @"userCell";
+    //static NSString *simpleTableIdentifier = @"userCell";
+    NSString *simpleTableIdentifier = [NSString stringWithFormat:@"%@%i",@"leakCell",indexPath.row];
     UserCell *cell = nil;
     
     cell = (UserCell *)[self.friendsTable dequeueReusableCellWithIdentifier:simpleTableIdentifier];
@@ -138,8 +139,9 @@
     }
     
     cell.UserName.text =  [ NSString stringWithFormat:@"%@ %@", leak.FirstName, leak.LastName];
-    cell.Leaks.text = @"0 Leaks";
+    cell.Leaks.text = [ NSString stringWithFormat:@"%@ Leaks", leak.LeaksCount];
 
+    cell.UserLeakedImage.image = nil;
 
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0ul);
     
@@ -152,10 +154,10 @@
         
         dispatch_sync(dispatch_get_main_queue(), ^{
             cell.UserLeakedImage.image = img;
-            cell.UserLeakedImage.layer.borderWidth = 1.0f;
+            cell.UserLeakedImage.layer.borderWidth = 2.0f;
             cell.UserLeakedImage.layer.cornerRadius = cell.UserLeakedImage.frame.size.width/2;
             cell.UserLeakedImage.clipsToBounds = YES;
-            cell.UserLeakedImage.layer.borderColor = [[UIColor blackColor]CGColor];
+            cell.UserLeakedImage.layer.borderColor = [[UIColor whiteColor]CGColor];
             //[cell.loading stopAnimating];
         });
     });

@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+                self.loading.hidesWhenStopped = TRUE;
     
     self.loginButton.layer.borderWidth = 1.0f;
     self.loginButton.layer.cornerRadius = 5.0f ;
@@ -61,6 +62,7 @@
 
 - (IBAction)buttonTouched:(id)sender
 {
+        [self.loading startAnimating];
     // If the session state is any of the two "open" states when the button is clicked
     if (FBSession.activeSession.state == FBSessionStateOpen
         || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
@@ -106,6 +108,8 @@
 
 - (void)connectionDidFinishLoading:(NSURLConnection *)connection {
     NSLog(@"connectionDidFinishLoading");
+    
+
     
     LeakOperationResult *opr = [[LeakOperationResult alloc]initWithUser:self.receivedData];
         AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;

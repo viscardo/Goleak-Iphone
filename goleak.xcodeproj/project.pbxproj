@@ -128,8 +128,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CF1D25C4191B20C900753B60 /* iAd.framework in Frameworks */,
 				CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */,
+				CF1D25C4191B20C900753B60 /* iAd.framework in Frameworks */,
 				CF6641BE18E3A91400AEE34F /* CoreGraphics.framework in Frameworks */,
 				CF6641C018E3A91400AEE34F /* UIKit.framework in Frameworks */,
 				CF6641BC18E3A91400AEE34F /* Foundation.framework in Frameworks */,
@@ -582,6 +582,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/viscardo/GoLeak/goleak,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";
@@ -601,6 +602,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					/Users/viscardo/GoLeak/goleak,
+					"$(PROJECT_DIR)",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "goleak/goleak-Prefix.pch";

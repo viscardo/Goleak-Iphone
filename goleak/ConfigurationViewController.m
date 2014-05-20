@@ -80,6 +80,8 @@
     
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
     [[LeakService new] RemoveProfile :appDelegate.userEntity.Id :self  ];
+    
+
 }
 
 - (IBAction)ActionLogOut:(id)sender {
@@ -142,6 +144,15 @@
                                    delegate:self
                           cancelButtonTitle:@"OK!"
                           otherButtonTitles:nil] show];
+        
+        
+        [FBSession.activeSession closeAndClearTokenInformation];
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        appDelegate.facebookId = nil;
+        appDelegate.authToken = nil;
+        
+        UINavigationController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginID"];
+        [self presentViewController:monitorMenuViewController animated:NO completion:nil];
     }
     
     

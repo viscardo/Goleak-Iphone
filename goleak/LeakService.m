@@ -67,14 +67,14 @@
 
 -(void) UpdateFriends :(NSString*)Id :(NSString*)accesstoken :(id)delegate
 {
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/UpdateFriends?Id=%@&accesstoken=%@", Id, accesstoken];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostUpdateFriends?Id=%@&accesstoken=%@", Id, accesstoken];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     
@@ -84,14 +84,14 @@
 
 -(void) RemoveProfile :(NSString*)Id :(id)delegate
 {
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/RemoveProfile?id=%@", Id];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostRemoveProfile?id=%@", Id];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     

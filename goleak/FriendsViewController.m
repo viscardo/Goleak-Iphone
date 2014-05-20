@@ -15,6 +15,7 @@
 @interface FriendsViewController ()
 
 @property (nonatomic, strong) NSMutableData *receivedData;
+@property (nonatomic, strong) NSArray *searchResults;
 
 @end
 
@@ -47,6 +48,25 @@
     
 }
 
+/* Begin Search Methods */
+- (void)filterContentForSearchText:(NSString*)searchText scope:(NSString*)scope
+{
+    NSPredicate *resultPredicate = [NSPredicate predicateWithFormat:@"FirstName contains[c] %@", searchText];
+ 
+    _searchResults = [self.leaksArray  filteredArrayUsingPredicate:resultPredicate];
+}
+
+-(BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{
+    [self filterContentForSearchText:searchString
+                               scope:[[self.searchDisplayController.searchBar scopeButtonTitles]
+                                      objectAtIndex:[self.searchDisplayController.searchBar
+                                                     selectedScopeButtonIndex]]];
+    
+    return YES;
+}
+
+/* End Search Methods */
 
 - (void) connection:(NSURLConnection *)connection didReceiveData:(NSData *)data
 {
@@ -79,16 +99,31 @@
 
 
 
-
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return  [self.leaksArray count];
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        return [_searchResults count];
+        
+    } else {
+        return [self.leaksArray count];
+    }
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 110;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     
-    friendChosen = [self.leaksArray objectAtIndex:indexPath.row];
+    if (self.searchDisplayController.active) {
+        indexPath = [self.searchDisplayController.searchResultsTableView indexPathForSelectedRow];
+        friendChosen = [_searchResults objectAtIndex:indexPath.row];
+    } else {
+        friendChosen = [self.leaksArray  objectAtIndex:indexPath.row];
+    }
+    
     
     [self performSegueWithIdentifier:@"segueFriend" sender:self ];
     
@@ -100,6 +135,8 @@
     
     if ([[segue identifier] isEqualToString:@"segueFriend"])
     {
+
+        
         UserViewController *UserVC = (UserViewController *)[segue destinationViewController];
         
         UserVC.UserChosen = [[UserEntity alloc]init];
@@ -121,8 +158,14 @@
     
     cell = (UserCell *)[self.friendsTable dequeueReusableCellWithIdentifier:simpleTableIdentifier];
     
-    UserEntity *leak = [self.leaksArray objectAtIndex:[indexPath row]];
+    UserEntity *leak = nil;
     
+    if (tableView == self.searchDisplayController.searchResultsTableView) {
+        leak = [_searchResults objectAtIndex:indexPath.row];
+    } else {
+        leak = [self.leaksArray objectAtIndex:[indexPath row]];
+    }
+
     if(!cell)
     {
         NSArray *leaks = [[NSBundle mainBundle]loadNibNamed:@"UserCell" owner:nil options:nil];
@@ -137,6 +180,9 @@
         }
         
     }
+    
+
+    
     
     cell.UserName.text =  [ NSString stringWithFormat:@"%@ %@", leak.FirstName, leak.LastName];
     cell.Leaks.text = [ NSString stringWithFormat:@"%@ Leaks", leak.LeaksCount];

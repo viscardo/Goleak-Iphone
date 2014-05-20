@@ -14,6 +14,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *loginButton;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
+@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 
 
 @end

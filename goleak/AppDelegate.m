@@ -159,6 +159,10 @@
 {
     // Set the button title as "Log out"
     UIButton *loginButton = self.customLoginViewController.loginButton;
+    
+    [self.customLoginViewController.loading stopAnimating];
+    self.customLoginViewController.loading.hidesWhenStopped = TRUE;
+    
     [loginButton setTitle:@"Log out" forState:UIControlStateNormal];
     
     // Welcome message

@@ -155,6 +155,9 @@
 
 - (IBAction)textFieldDismiss:(id)sender {
     [_LeakText resignFirstResponder ];
+    
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+    [[LeakService new] GetCreateLeak : _LeakText.text  :UserChosen.Id :appDelegate.userEntity.Id :self  ];
 }
 
 

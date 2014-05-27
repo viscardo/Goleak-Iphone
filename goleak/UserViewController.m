@@ -31,6 +31,10 @@
     return self;
 }
 
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return NO;
+}
 
 
 - (void)viewDidLoad

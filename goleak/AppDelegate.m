@@ -176,10 +176,12 @@
              
              _authToken = [[[FBSession activeSession] accessTokenData] accessToken];
          
-             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
-             LoginViewController *ivc = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewId"];
              self.facebookId =_facebookId;
-             [(UINavigationController*)self.window.rootViewController pushViewController:ivc animated:NO];
+                          
+             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+             UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+             window.rootViewController = [storyboard instantiateInitialViewController];
+             
 
          }
      }];

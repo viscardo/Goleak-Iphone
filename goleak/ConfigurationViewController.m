@@ -93,8 +93,10 @@
     appDelegate.facebookId = nil;
     appDelegate.authToken = nil;
     
-    UINavigationController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginID"];
-    [self presentViewController:monitorMenuViewController animated:NO completion:nil];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+    window.rootViewController = [storyboard instantiateInitialViewController];
+    
     
 }
 
@@ -151,8 +153,10 @@
         appDelegate.facebookId = nil;
         appDelegate.authToken = nil;
         
-        UINavigationController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loginID"];
-        [self presentViewController:monitorMenuViewController animated:NO completion:nil];
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main_iPhone" bundle:nil];
+        UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+        window.rootViewController = [storyboard instantiateInitialViewController];
+        
     }
     
     
@@ -188,5 +192,11 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+-(BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
+{
+    return NO;
+}
+
 
 @end

@@ -21,6 +21,7 @@
 @property (strong, nonatomic) UIWindow *window;
 @property (strong, nonatomic) LoginViewController *customLoginViewController;
 @property (strong, nonatomic) UserEntity *userEntity;
+@property (strong, nonatomic) NSMutableArray *arrFacebookFriends;
 
 - (void)sessionStateChanged:(FBSession *)session state:(FBSessionState) state error:(NSError *)error;
 - (void)userLoggedIn;

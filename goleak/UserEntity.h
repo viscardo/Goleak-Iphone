@@ -16,6 +16,7 @@
     NSString *FacebookId;
     NSString *AuthToken;
     NSString *LeaksCount;
+    int *FriendsCount;
     
 }
 
@@ -26,5 +27,6 @@
 @property (nonatomic, retain) NSString *PicUrl;
 @property (nonatomic, retain) NSString *AuthToken;
 @property (nonatomic, retain) NSString *LeaksCount;
+@property  int *FriendsCount;
 
 @end

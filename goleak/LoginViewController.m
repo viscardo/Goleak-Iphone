@@ -7,6 +7,7 @@
 //
 
 #import "LoginViewController.h"
+#import "LoadingViewController.h"
 #import "ViewController.h"
 #import <FacebookSDK/FacebookSDK.h>
 #import "LeakService.h"
@@ -111,12 +112,18 @@
     
     appDelegate.userEntity = opr.userEntity;
     
-   
+    if(appDelegate.userEntity.FriendsCount == 0)
+    {
+        LoadingViewController *LoadingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loading"];
+        [self presentViewController:LoadingViewController animated:NO completion:nil];
+    }
+   else
+   {
     
     UITabBarController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
     [self presentViewController:monitorMenuViewController animated:NO completion:nil];
     
-    
+   }
 
     
 }

@@ -92,8 +92,49 @@
         NSLog(@"Session opened");
         // Show the user the logged-in UI
         [self userLoggedIn];
+        
+        if (self != nil)
+        {
+            [[FBRequest requestForMe] startWithCompletionHandler: ^(FBRequestConnection *connection, NSDictionary<FBGraphUser> *user, NSError *error) {
+                if (error) {
+                    //error
+                }else{
+                    FBRequest* friendsRequest = [FBRequest requestForMyFriends];
+                    [friendsRequest startWithCompletionHandler: ^(FBRequestConnection *connection,NSDictionary* result,NSError *error) {
+                        
+                        _arrFacebookFriends = [[NSMutableArray alloc]init];
+                        NSArray* friends = [result objectForKey:@"data"];
+                        
+                        for (int i = 0; i < [_arrFacebookFriends count]; i++) {
+                            UserEntity *shareObj = [_arrFacebookFriends objectAtIndex:i];
+                            //[shareObj release];
+                            shareObj = nil;
+                        }
+                        [_arrFacebookFriends removeAllObjects];
+                        
+                        for (NSDictionary<FBGraphUser>* friend in friends) {
+                            UserEntity *shareObj = [[UserEntity alloc] init];
+                            shareObj.FirstName = friend.name;
+                            shareObj.LastName = friend.username;
+                            shareObj.FacebookId = friend.id;
+                            NSLog(@"%@",friend.id);
+                            //shareObj.userPhotoUrl = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?", friend.id];
+                            [_arrFacebookFriends addObject:shareObj];
+                            //[shareObj release];
+                        }
+                        //[self StopSpinner];
+                        //[tblFacebookFriends reloadData];
+                    }];
+                }
+            }];
+        }
+        FBCacheDescriptor *cacheDescriptor = [FBFriendPickerViewController cacheDescriptor];
+        [cacheDescriptor prefetchAndCacheForSession:session];
+    
+        
         return;
     }
+    
     if (state == FBSessionStateClosed || state == FBSessionStateClosedLoginFailed){
         // If the session is closed
         NSLog(@"Session closed");

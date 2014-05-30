@@ -14,19 +14,16 @@
 
 @implementation LoadingViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+        [self.loading startAnimating];
+    self.logoImage.layer.borderWidth = 3.0f;
+    self.logoImage.layer.cornerRadius = self.logoImage.frame.size.width/2;
+    self.logoImage.clipsToBounds = YES;
+    self.logoImage.layer.borderColor = [[UIColor whiteColor]CGColor];
 }
 
 - (void)didReceiveMemoryWarning

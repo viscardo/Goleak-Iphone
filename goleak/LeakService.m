@@ -66,7 +66,7 @@
     [NSURLConnection connectionWithRequest:request delegate:delegate];
 }
 
--(void) UpdateFriends :(NSString*)Id :(NSMutableArray*)facebookFriends :(id)delegate
+-(void) UpdateFriends :(NSString*)Id :(NSString*)accesstoken :(NSMutableArray*)facebookFriends :(id)delegate
 {
     NSArray *keys = [NSArray arrayWithObjects:@"FacebookId",nil];
     NSArray *objects = [NSArray arrayWithObjects:facebookFriends,nil];
@@ -74,7 +74,7 @@
     NSString* jsonString = [jsonDictionary JSONRepresentation];
     NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
     
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostUpdateFriends?Id=%@&facebookFriends=%@", Id, facebookFriends];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostUpdateFriends?Id=%@&accesstoken=%@&facebookFriends=%@", Id, accesstoken, facebookFriends];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     

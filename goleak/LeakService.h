@@ -19,6 +19,6 @@
 -(void) GetCreateLeak :(NSString*) LeakText :(NSString*) UserLeakedId :(NSString*)  userId :(id)delegate;
 
 -(void) RemoveProfile :(NSString*)userId :(id)delegate;
--(void) UpdateFriends :(NSString*)userId :(NSString*)accesstoken :(id)delegate;
+-(void) UpdateFriends :(NSString*)userId :(NSMutableArray*)facebookFriends :(id)delegate;
 
 @end

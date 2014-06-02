@@ -8,6 +8,7 @@
 
 #import "LeakService.h"
 
+
 @implementation LeakService
 
 
@@ -65,9 +66,15 @@
     [NSURLConnection connectionWithRequest:request delegate:delegate];
 }
 
--(void) UpdateFriends :(NSString*)Id :(NSString*)accesstoken :(id)delegate
+-(void) UpdateFriends :(NSString*)Id :(NSMutableArray*)facebookFriends :(id)delegate
 {
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostUpdateFriends?Id=%@&accesstoken=%@", Id, accesstoken];
+    NSArray *keys = [NSArray arrayWithObjects:@"FacebookId",nil];
+    NSArray *objects = [NSArray arrayWithObjects:facebookFriends,nil];
+    NSDictionary *jsonDictionary = [NSDictionary dictionaryWithObjects:objects forKeys:keys];
+    NSString* jsonString = [jsonDictionary JSONRepresentation];
+    NSData *jsonData = [jsonString dataUsingEncoding:NSUTF8StringEncoding];
+    
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostUpdateFriends?Id=%@&facebookFriends=%@", Id, facebookFriends];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     

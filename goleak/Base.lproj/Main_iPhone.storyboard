@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ejm-DC-dU0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="5056" systemVersion="13D65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="yJV-Lq-s1u">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
@@ -48,7 +48,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2131" y="-93"/>
+            <point key="canvasLocation" x="2657" y="-93"/>
         </scene>
         <!--List Leak View Controller-->
         <scene sceneID="aK6-Tc-dPf">
@@ -145,7 +145,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4h1-94-jAi" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2531" y="-88"/>
+            <point key="canvasLocation" x="3057" y="-88"/>
         </scene>
         <!--Friends View Controller - Friends-->
         <scene sceneID="QuK-sk-bjm">
@@ -477,7 +477,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ptc-sc-T8A" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1708" y="-88"/>
+            <point key="canvasLocation" x="2234" y="-88"/>
         </scene>
         <!--Login View Controller-->
         <scene sceneID="uEn-hs-aCV">
@@ -510,7 +510,7 @@
                                 <color key="backgroundColor" red="0.3398660261" green="0.55654830960000001" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CHD-32-Vz7">
-                                <rect key="frame" x="80" y="375" width="161" height="38"/>
+                                <rect key="frame" x="80" y="317" width="161" height="38"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.3398660261" green="0.55654830960000001" blue="0.75" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Log in with Facebook">
@@ -522,22 +522,43 @@
                                 </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="We will never post on your facebook" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QP5-bs-p9m">
-                                <rect key="frame" x="26" y="447" width="278" height="21"/>
+                                <rect key="frame" x="26" y="465" width="278" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Say whatever you want about your friends from Facebook without them knowing." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CM8-wz-n8J">
-                                <rect key="frame" x="40" y="249" width="240" height="67"/>
+                                <rect key="frame" x="40" y="239" width="240" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.89977496599999995" green="0.89977496599999995" blue="0.89977496599999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="hps-cX-R1m">
-                                <rect key="frame" x="155" y="237" width="20" height="20"/>
+                                <rect key="frame" x="155" y="219" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Kq-l5-Uiv">
+                                <rect key="frame" x="20" y="389" width="51" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Please agree the terms before start." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-Gd-BEX">
+                                <rect key="frame" x="80" y="394" width="273" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wDz-Om-LL6">
+                                <rect key="frame" x="66" y="437" width="188" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="click here to read our terms">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="XHN-VD-NXm" kind="push" id="5ef-AX-VvC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.89977496603260865" green="0.89977496603260865" blue="0.89977496603260865" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -550,7 +571,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tYr-xG-oX4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="523" y="-61"/>
+            <point key="canvasLocation" x="813" y="-61"/>
         </scene>
         <!--Loading View Controller-->
         <scene sceneID="Iae-Sl-dlq">
@@ -565,15 +586,15 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k0D-3v-eur">
-                                <rect key="frame" x="0.0" y="54" width="320" height="201"/>
+                                <rect key="frame" x="0.0" y="82" width="320" height="173"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="goleak_branco.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="UZY-Mm-oGK">
-                                        <rect key="frame" x="100" y="144" width="120" height="120"/>
+                                        <rect key="frame" x="100" y="116" width="120" height="120"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Thanks for being part of GoLeak Network" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="278" translatesAutoresizingMaskIntoConstraints="NO" id="MJg-yq-U1A">
-                                        <rect key="frame" x="20" y="36" width="278" height="64"/>
+                                        <rect key="frame" x="20" y="8" width="278" height="64"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -598,6 +619,10 @@
                                 <rect key="frame" x="150" y="300" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-vF-aIk">
+                                <rect key="frame" x="0.0" y="34" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                     </view>
@@ -608,7 +633,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a5u-0E-azl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="933" y="-61"/>
+            <point key="canvasLocation" x="287" y="655"/>
+        </scene>
+        <!--Disclaimer View Controller-->
+        <scene sceneID="yGe-2E-VC3">
+            <objects>
+                <viewController id="XHN-VD-NXm" customClass="DisclaimerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ccg-yH-bHa"/>
+                        <viewControllerLayoutGuide type="bottom" id="88S-Ob-8YA"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ZcL-GL-PDz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7DT-ny-kO1">
+                                <rect key="frame" x="0.0" y="65" width="320" height="500"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="edN-Ch-Fem"/>
+                    <connections>
+                        <outlet property="webView" destination="7DT-ny-kO1" id="Gyt-q7-pzz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nql-f3-k6u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1409" y="-61"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="mdn-Bz-p3I">
@@ -629,7 +683,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GB2-Pe-jlW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1342" y="-61"/>
+            <point key="canvasLocation" x="1868" y="-61"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qjJ-2g-kSJ">
@@ -668,6 +722,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ES1-K2-hB0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="841" y="1454"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="2IO-3U-U44">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yJV-Lq-s1u" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fur-LZ-3Ox">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="ejm-DC-dU0" kind="relationship" relationship="rootViewController" id="Bwc-uk-uwi"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSb-1c-hNB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="287" y="-61"/>
         </scene>
     </scenes>
     <resources>

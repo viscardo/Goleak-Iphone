@@ -112,6 +112,7 @@
     
     appDelegate.userEntity = opr.userEntity;
     
+    
     if(appDelegate.userEntity.FriendsCount == 0)
     {
         LoadingViewController *LoadingViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"loading"];

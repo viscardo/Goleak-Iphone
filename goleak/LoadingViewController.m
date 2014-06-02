@@ -31,7 +31,7 @@
     self.logoImage.layer.borderColor = [[UIColor whiteColor]CGColor];
     
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    [[LeakService new] UpdateFriends :appDelegate.userEntity.Id :appDelegate.arrFacebookFriends :self  ];
+    [[LeakService new] UpdateFriends :appDelegate.userEntity.Id :appDelegate.authToken :appDelegate.arrFacebookFriends :self  ];
 }
 
 - (void)didReceiveMemoryWarning

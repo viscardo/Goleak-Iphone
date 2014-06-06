@@ -110,7 +110,7 @@
                             //[shareObj release];
                             shareObj = nil;
                         }
-                        [_arrFacebookFriends removeAllObjects];
+                        [_arrFacebookFriends  removeAllObjects];
                         
                         for (NSDictionary<FBGraphUser>* friend in friends) {
                             UserEntity *shareObj = [[UserEntity alloc] init];
@@ -119,8 +119,8 @@
                             shareObj.FacebookId = friend.id;
                             NSLog(@"%@",friend.id);
                             //shareObj.userPhotoUrl = [NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?", friend.id];
-                            [_arrFacebookFriends addObject:shareObj];
-                            //[shareObj release];
+                            [_arrFacebookFriends addObject:friend.id];
+                            
                         }
                         //[self StopSpinner];
                         //[tblFacebookFriends reloadData];

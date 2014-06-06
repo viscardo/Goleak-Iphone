@@ -14,4 +14,5 @@
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loading;
 @property (weak, nonatomic) IBOutlet UIImageView *logoImage;
 
+
 @end

@@ -58,7 +58,9 @@
 
 - (IBAction)buttonTouched:(id)sender
 {
-        [self.loading startAnimating];
+    if ([_disclaimer isOn]) {
+        NSLog(@"its on!");
+             [self.loading startAnimating];
     // If the session state is any of the two "open" states when the button is clicked
     if (FBSession.activeSession.state == FBSessionStateOpen
         || FBSession.activeSession.state == FBSessionStateOpenTokenExtended) {
@@ -82,7 +84,16 @@
              [appDelegate sessionStateChanged:session state:state error:error];
          }];
         
+        }
     }
+    else {
+        [[[UIAlertView alloc] initWithTitle:@"Go Leak"
+                                    message:@"You must agree with ours terms before log into our Network."
+                                   delegate:self
+                          cancelButtonTitle:@"OK!"
+                          otherButtonTitles:nil] show];
+    }
+
 }
 
 

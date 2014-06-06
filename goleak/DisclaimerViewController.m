@@ -19,7 +19,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    theURL = [NSURL URLWithString:@"http://www.goleak.com/Terms"];
+    theURL = [NSURL URLWithString:@"http://www.goleak.com/Terms/Index"];
     NSURLRequest *requestObject = [NSURLRequest requestWithURL:theURL];
     [webView loadRequest:requestObject];
 }

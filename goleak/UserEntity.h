@@ -27,6 +27,6 @@
 @property (nonatomic, retain) NSString *PicUrl;
 @property (nonatomic, retain) NSString *AuthToken;
 @property (nonatomic, retain) NSString *LeaksCount;
-@property  int *FriendsCount;
+@property  int FriendsCount;
 
 @end

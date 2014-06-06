@@ -70,7 +70,7 @@
     self.receivedData = [[NSMutableData alloc] init];
     
     AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
-    [[LeakService new] UpdateFriends :appDelegate.userEntity.Id :appDelegate.authToken :self  ];
+    [[LeakService new] UpdateFriends :appDelegate.userEntity.Id  :appDelegate.authToken :appDelegate.arrFacebookFriends :self  ];
 }
 
 - (IBAction)ActionRemoveProfile:(id)sender {

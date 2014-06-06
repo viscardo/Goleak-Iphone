@@ -25,6 +25,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
         [self.loading startAnimating];
+            self.receivedData = [[NSMutableData alloc] init];
     self.logoImage.layer.borderWidth = 3.0f;
     self.logoImage.layer.cornerRadius = self.logoImage.frame.size.width/2;
     self.logoImage.clipsToBounds = YES;
@@ -75,10 +76,14 @@
                           cancelButtonTitle:@"OK!"
                           otherButtonTitles:nil] show];
         
+        UITabBarController *monitorMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"tabBarId"];
+        [self presentViewController:monitorMenuViewController animated:NO completion:nil];
+        
         
     }
     else
     {
+     
         
         [[[UIAlertView alloc] initWithTitle:@"Go Leak"
                                     message:opr.Message

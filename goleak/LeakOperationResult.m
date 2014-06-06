@@ -129,7 +129,7 @@
                 d.FirstName = [res objectForKey:@"FirstName"];
                 d.LastName = [res objectForKey:@"LastName"];
                 d.FacebookId = [res objectForKey:@"Fb"];
-                d.FriendsCount = [res objectForKey:@"FriendsCount"];
+                d.FriendsCount = [[res objectForKey:@"FriendsCount"] longValue ];
                 NSString *fbuid = d.FacebookId;
                 NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://graph.facebook.com/%@/picture?type=large", fbuid]];
                 

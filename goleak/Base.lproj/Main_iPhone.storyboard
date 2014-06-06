@@ -564,6 +564,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="KR3-1u-fuA"/>
                     <connections>
+                        <outlet property="disclaimer" destination="9Kq-l5-Uiv" id="QFW-bO-ygM"/>
                         <outlet property="loading" destination="hps-cX-R1m" id="h7n-xM-fNm"/>
                         <outlet property="loginButton" destination="CHD-32-Vz7" id="GKh-KT-voS"/>
                         <outlet property="logoImage" destination="2VI-J1-sHe" id="8Jn-gq-HS6"/>

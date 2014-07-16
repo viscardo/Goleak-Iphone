@@ -14,14 +14,17 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>goleak.png</string>
+				<string>Icon.png</string>
+				<string>Icon-60.png</string>
+				<string>Icon-76.png</string>
+				<string>Icon-120.png</string>
 			</array>
 		</dict>
 	</dict>
 	<key>CFBundleIcons~ipad</key>
 	<dict/>
 	<key>CFBundleIdentifier</key>
-	<string>beto.${PRODUCT_NAME:rfc1034identifier}</string>
+	<string>Goleak.Goleak</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

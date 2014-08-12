@@ -71,19 +71,22 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aqW-tw-zkY">
-                                <rect key="frame" x="20" y="353" width="110" height="64"/>
+                                <rect key="frame" x="57" y="361" width="184" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="False" image="unlike2.png"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <state key="normal" title="Report offensive leak" image="not_allowed.gif">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                </state>
                                 <connections>
                                     <action selector="buttonFalseTouched:" destination="NRt-cA-OtW" eventType="touchUpInside" id="HBr-1P-lXT"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmb-fV-UfW">
-                                <rect key="frame" x="190" y="353" width="110" height="64"/>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cmb-fV-UfW">
+                                <rect key="frame" x="57" y="398" width="184" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0" green="0.74019191579999999" blue="6.0706480039999997e-05" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="True" image="like.png">
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <state key="normal" title="Delete Leak" image="trash.png">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -745,8 +748,8 @@
     </scenes>
     <resources>
         <image name="goleak_branco.jpg" width="120" height="96"/>
-        <image name="like.png" width="64" height="64"/>
-        <image name="unlike2.png" width="64" height="64"/>
+        <image name="not_allowed.gif" width="32" height="32"/>
+        <image name="trash.png" width="32" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
@@ -755,7 +758,7 @@
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
         <segue reference="KqJ-8O-7Hu"/>
-        <segue reference="Lb2-oe-Ecr"/>
         <segue reference="x7z-K8-GXJ"/>
+        <segue reference="t5C-eF-jzv"/>
     </inferredMetricsTieBreakers>
 </document>

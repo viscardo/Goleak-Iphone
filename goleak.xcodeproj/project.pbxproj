@@ -24,6 +24,8 @@
 		1C736AF3197612A700A6DDB4 /* iTunesArtwork.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C736AE3197612A700A6DDB4 /* iTunesArtwork.png */; };
 		1C736AF4197612A700A6DDB4 /* iTunesArtwork@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C736AE4197612A700A6DDB4 /* iTunesArtwork@2x.png */; };
 		1C736AF619761CF900A6DDB4 /* Icon-120.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C736AF519761CF900A6DDB4 /* Icon-120.png */; };
+		1CB475381997FAE700D81BBF /* not_allowed.gif in Resources */ = {isa = PBXBuildFile; fileRef = 1CB475371997FAE700D81BBF /* not_allowed.gif */; };
+		1CB4753A1998264A00D81BBF /* trash.png in Resources */ = {isa = PBXBuildFile; fileRef = 1CB475391998264A00D81BBF /* trash.png */; };
 		1CFADF62193BCB1300F25317 /* DisclaimerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFADF61193BCB1300F25317 /* DisclaimerViewController.m */; };
 		CF088C3818F4E1610072C9BD /* FacebookSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF28B89118F4AC7E005C90EE /* FacebookSDK.framework */; };
 		CF0D35BA19258700001EBF13 /* ConfigurationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CF0D35B919258700001EBF13 /* ConfigurationViewController.m */; };
@@ -94,6 +96,8 @@
 		1C736AE3197612A700A6DDB4 /* iTunesArtwork.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = iTunesArtwork.png; path = icons/iTunesArtwork.png; sourceTree = "<group>"; };
 		1C736AE4197612A700A6DDB4 /* iTunesArtwork@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "iTunesArtwork@2x.png"; path = "icons/iTunesArtwork@2x.png"; sourceTree = "<group>"; };
 		1C736AF519761CF900A6DDB4 /* Icon-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-120.png"; path = "icons/Icon-120.png"; sourceTree = "<group>"; };
+		1CB475371997FAE700D81BBF /* not_allowed.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = not_allowed.gif; path = ../../Downloads/goleaks_icons/not_allowed.gif; sourceTree = "<group>"; };
+		1CB475391998264A00D81BBF /* trash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = trash.png; path = ../../Downloads/goleaks_icons/trash.png; sourceTree = "<group>"; };
 		1CFADF60193BCB1300F25317 /* DisclaimerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisclaimerViewController.h; sourceTree = "<group>"; };
 		1CFADF61193BCB1300F25317 /* DisclaimerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DisclaimerViewController.m; sourceTree = "<group>"; };
 		CF0D35B819258700001EBF13 /* ConfigurationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ConfigurationViewController.h; sourceTree = "<group>"; };
@@ -238,6 +242,8 @@
 		CF28B89618F4B007005C90EE /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				1CB475391998264A00D81BBF /* trash.png */,
+				1CB475371997FAE700D81BBF /* not_allowed.gif */,
 				CF2AA9CD191C37BF00FD52BD /* goleak_branco.jpg */,
 				CF1D25C1191B18FF00753B60 /* unlike2.png */,
 				CF1D25BF191B18F800753B60 /* like.png */,
@@ -463,6 +469,7 @@
 				1C736AEE197612A700A6DDB4 /* Icon-Small-50@2x.png in Resources */,
 				CF29248518FC9B2300C604A7 /* UserCell.xib in Resources */,
 				1C736AEC197612A700A6DDB4 /* Icon-Small-40@2x.png in Resources */,
+				1CB475381997FAE700D81BBF /* not_allowed.gif in Resources */,
 				CF6641CF18E3A91400AEE34F /* Main_iPhone.storyboard in Resources */,
 				CFA92DC818FF761000B4F112 /* goleak_120.png in Resources */,
 				1C736AED197612A700A6DDB4 /* Icon-Small-50.png in Resources */,
@@ -477,6 +484,7 @@
 				1C736AE9197612A700A6DDB4 /* Icon-76@.png in Resources */,
 				1C736AF0197612A700A6DDB4 /* Icon-Small@2x.png in Resources */,
 				1C736AF619761CF900A6DDB4 /* Icon-120.png in Resources */,
+				1CB4753A1998264A00D81BBF /* trash.png in Resources */,
 				CF1D25C0191B18F800753B60 /* like.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

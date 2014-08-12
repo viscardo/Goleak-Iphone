@@ -131,11 +131,9 @@
     
     
 }
-
-
--(void) GetLike :(NSString*) leakId :(NSString*)  userId :(id)delegate
+-(void) GetLeakOnwer :(NSString*) leakId :(NSString*)  userId :(id)delegate;
 {
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetLike?LeakId=%@&userId=%@", leakId, userId];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetCheckLeakOnwer?LeakId=%@&userId=%@", leakId, userId];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     
@@ -149,16 +147,32 @@
     [NSURLConnection connectionWithRequest:request delegate:delegate];
 }
 
--(void) GetDislike :(NSString*) leakId :(NSString*)  userId :(id)delegate
+-(void) GetLike :(NSString*) leakId :(NSString*)  userId :(id)delegate
 {
-    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/GetDislike?LeakId=%@&userId=%@", leakId, userId];
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/DeleteLeak?LeakId=%@&userId=%@&accesstoken=1", leakId, userId];
     
     NSURL *url = [NSURL URLWithString: urlConcat];
     
     
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     
-    [request setHTTPMethod:@"GET"];
+    [request setHTTPMethod:@"DELETE"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
+    [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
+    
+    [NSURLConnection connectionWithRequest:request delegate:delegate];
+}
+
+-(void) GetDislike :(NSString*) leakId :(NSString*)  userId :(id)delegate
+{
+    NSString *urlConcat = [ NSString stringWithFormat:@"http://www.goleak.com/API/Leak/PostReportSpam?LeakId=%@&userId=%@", leakId, userId];
+    
+    NSURL *url = [NSURL URLWithString: urlConcat];
+    
+    
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
+    
+    [request setHTTPMethod:@"POST"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Accept"];
     [request setValue:@"application/json" forHTTPHeaderField:@"Content-Type"];
     

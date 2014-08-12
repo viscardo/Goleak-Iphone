@@ -36,6 +36,11 @@
     
     if(self.leakChosen) {
         self.receivedData = [[NSMutableData alloc] init];
+        
+        
+        AppDelegate* appDelegate = [UIApplication sharedApplication].delegate;
+        [[LeakService new] GetLeakOnwer :self.leakChosen.codigo :appDelegate.userEntity.Id :self  ];
+        
         self.userName.text = _leakChosen.userName;
         self.leakText.text = _leakChosen.leakText;
         //self.trueButton.titleLabel.text = [NSString stringWithFormat:@"True(%@)", _leakChosen.likes];
@@ -132,7 +137,12 @@
     
     LeakOperationResult * opr = [[LeakOperationResult alloc]initWithBoolResult :self.receivedData];
     
-    if(opr.result)
+    if ([opr.Tipo  isEqualToString:@"LEAK_ONWER"])
+    {
+        self.trueButton.hidden = false;
+        
+    }
+    else if([opr.Tipo  isEqualToString:@"DELETE_LEAK"])
     {
         [[[UIAlertView alloc] initWithTitle:@"Oh Yes!"
                                     message:opr.Message
@@ -141,16 +151,20 @@
                           otherButtonTitles:nil] show];
         
         [self performSegueWithIdentifier:@"segueBackFeed" sender:self ];
-    }
-    else
-    {
         
-        [[[UIAlertView alloc] initWithTitle:@"Oh No!"
+    }
+    else if([opr.Tipo  isEqualToString:@"REPORT_SPAM"])
+    {
+        [[[UIAlertView alloc] initWithTitle:@"Offensive leak"
                                     message:opr.Message
                                    delegate:self
                           cancelButtonTitle:@"OK!"
                           otherButtonTitles:nil] show];
+        
+        [self performSegueWithIdentifier:@"segueBackFeed" sender:self ];
+        
     }
+    
     
 
 }

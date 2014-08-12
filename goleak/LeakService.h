@@ -18,6 +18,8 @@
 -(void) GetDislike :(NSString*) leakId :(NSString*)  userId :(id)delegate;
 -(void) GetCreateLeak :(NSString*) LeakText :(NSString*) UserLeakedId :(NSString*)  userId :(id)delegate;
 
+-(void) GetLeakOnwer :(NSString*) leakId :(NSString*)  userId :(id)delegate;
+
 -(void) RemoveProfile :(NSString*)userId :(id)delegate;
 -(void) UpdateFriends :(NSString*)Id :(NSString*)accesstoken :(NSMutableArray*)facebookFriends :(id)delegate;
 

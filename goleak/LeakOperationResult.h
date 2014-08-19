@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong)  NSMutableArray *leaks;
 @property (nonatomic, strong)  NSMutableArray *friends;
-@property bool *result;
+@property (nonatomic, assign) bool result;
 @property (nonatomic, strong)  NSString *Message;
 @property (nonatomic, strong)  NSString *Tipo;
 @property (strong, nonatomic) UserEntity *userEntity;

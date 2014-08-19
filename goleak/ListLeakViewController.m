@@ -139,7 +139,10 @@
     
     if ([opr.Tipo  isEqualToString:@"LEAK_ONWER"])
     {
-        self.trueButton.hidden = false;
+        if(opr.result == true)
+        {
+            self.trueButton.hidden = false;
+        }
         
     }
     else if([opr.Tipo  isEqualToString:@"DELETE_LEAK"])

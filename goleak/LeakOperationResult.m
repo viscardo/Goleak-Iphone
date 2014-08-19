@@ -164,7 +164,7 @@
         
         @try {
             // Try something
-            self.result = [[res objectForKey:@"Sucess"] boolValue];
+            self.result = [res objectForKey:@"Sucess"];
             self.Tipo = [res objectForKey:@"Tipo"];
             self.Message = [res objectForKey:@"Message"];
 

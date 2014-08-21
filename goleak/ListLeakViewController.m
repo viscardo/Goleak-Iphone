@@ -33,6 +33,7 @@
     
 	// Do any additional setup after loading the view.
         self.loading.hidesWhenStopped = TRUE;
+    self.trueButton.hidden = true;
     
     if(self.leakChosen) {
         self.receivedData = [[NSMutableData alloc] init];
